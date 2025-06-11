@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Singhania University</title>
+    <title>Alcelerate</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -12,7 +12,7 @@
     <meta name="facebook-domain-verification" content="d2jks4eyu9742el01t5vjl4cffynaz" />
 
     <!-- Favicon -->
-    <link href="img/logo.png" rel="icon">
+    <link href="img/logo.webp" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,32 +32,37 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17009372204"></script>
+
+
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1219226336561767');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17161079321"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'AW-17009372204');
+  gtag('config', 'AW-17161079321');
 </script>
-    <!-- Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1710266089914779');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1710266089914779&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+   
 </head>
 
 <body>
@@ -74,7 +79,7 @@
 
 
    <!-- Hero Section Start -->
-   <div class="container-fluid p-0 mb-5">
+   <div class="container-fluid p-0">
     <div class="position-relative w-100 min-vh-100 heroSection">
         
         <!-- Overlay -->
@@ -83,25 +88,47 @@
         <!-- Apply Now Button -->
         <a href="#" class="btn apply-btn" 
            data-bs-toggle="modal" data-bs-target="#detailsModal">
-            Apply Now
+            Get Access
         </a>
 
+     </div>
+     <div class="position-relative w-100 min-vh-100 heroSection1">
+        
+        
+     </div>
     </div>
-</div>
 
 <style>
 /* Default Background for Desktop */
 .heroSection {
-    background: url('img/banner.png') no-repeat center center;
+    background: url('img/banner.webp') no-repeat center center;
     background-size: 100% auto; /* Full width, auto height */
     width: 100vw; /* Full viewport width */
     height: auto; 
-    aspect-ratio: 16 / 9; /* Maintain 1920x1080 ratio */
+    min-height: 80vh !important;
+    /* aspect-ratio: 16 / 9; Maintain 1920x1080 ratio */
+}
+
+.heroSection1 {
+    background: url('img/banner1.webp') no-repeat center center;
+    background-size: 100% auto; /* Full width, auto height */
+    width: 100vw; /* Full viewport width */
+    height: auto; 
+    min-height: 40vh !important;
+    /* aspect-ratio: 16 / 9; Maintain 1920x1080 ratio */
 }
 
 /* Background for Mobile */
 @media (max-width: 768px) {
     .heroSection {
+        background: url('img/banner_mob.png') no-repeat top center; /* Align to top */
+        background-size: 100% auto;
+        height: auto; 
+        aspect-ratio: 9 / 16;
+        width: 100vw;
+        min-height: calc(100vh - 200px) !important; /* Ensure space at bottom */
+    }
+    .heroSection1 {
         background: url('img/banner_mob.png') no-repeat top center; /* Align to top */
         background-size: 100% auto;
         height: auto; 
@@ -131,15 +158,15 @@
 /* Apply Button Position */
 .apply-btn {
     position: absolute;
-    bottom: 40px;
-    left: 30px;
+    bottom: 110px;
+    left: 80px;
     z-index: 2;
-    border-radius: 10px; 
+    border-radius: 30px; 
     font-weight: 600;
     padding: 14px 40px;
-    background-color: #831515;
+    background-color: #696cc7;
     color: #ffffff;
-    box-shadow: 0 4px 8px rgba(255, 0, 60, 0.382);
+    box-shadow: 0 4px 8px rgba(59, 101, 255, 0.382);
     transition: all 0.4s ease;                            
     font-size: 18px;
 }
@@ -149,7 +176,7 @@
 }
 
 .apply-btn:hover {
-    background-color: #db2e2e;
+    background-color: #484cbd;
 }
 
 </style>
@@ -157,148 +184,24 @@
    <!-- Hero Section End -->
 
 
-<!-- Form Section Start -->
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="card p-4 border-0 shadow-lg" style="
-                    border-radius: 15px;
-                    background: rgba(255, 255, 255, 0.2);
-                    backdrop-filter: blur(10px);
-                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-                ">
-                    <h2 class="text-center " style="
-                        font-family: 'Chunk Five', serif;
-                        font-size: 28px;
-                        font-weight: 700;
-                        color: #831515;
-                        text-transform: uppercase;
-                        letter-spacing: 1px;
-                    ">
-                        Apply Now
-                    </h2>
-    
-                    <form>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <label class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="name" required style="
-                                    border-radius: 8px;
-                                    padding: 14px;
-                                    border: 1px solid #ddd;
-                                    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-                                    transition: 0.3s ease;
-                                ">
-                            </div>
-    
-                            <div class="col-md-6">
-                                <label class="form-label">WhatsApp Number</label>
-                                <input type="tel" class="form-control" id="whatsapp" required style="
-                                    border-radius: 8px;
-                                    padding: 14px;
-                                    border: 1px solid #ddd;
-                                    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-                                ">
-                            </div>
-    
-                            <div class="col-md-6">
-                                <label class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="mainFormEmail" required style="
-                                    border-radius: 8px;
-                                    padding: 14px;
-                                    border: 1px solid #ddd;
-                                    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-                                ">
-                            </div>
-    
-                            <div class="col-md-6">
-                                <label class="form-label">City of Residence</label>
-                                <input type="text" class="form-control" id="mainFormCity" required style="
-                                    border-radius: 8px;
-                                    padding: 14px;
-                                    border: 1px solid #ddd;
-                                    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-                                ">
-                            </div>
-    
-                            <div class="col-md-12">
-                                <label class="form-label">Convenient Time to Connect</label>
-<input 
-    type="text" 
-    class="form-control" 
-    id="mainFormTime"
-    required 
-    placeholder="e.g., 3:00 PM – 4:00 PM"
-    style="
-        border-radius: 8px;
-        padding: 14px;
-        border: 1px solid #ddd;
-        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-    "
->
 
-                            </div>
-                            <div class="col-md-12 sendOtpBtn">
-                                <label class="form-label">Enter OTP</label>
-                                <div class="d-flex">
-                                    <input type="text" class="form-control me-2" id="otpField" placeholder="Enter OTP" required style="
-                                        border-radius: 8px;
-                                        padding: 14px;
-                                        border: 1px solid #ddd;
-                                        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-                                    ">
-                                    <button type="button" class="btn btn-outline-danger rounded-pill" id="otp" style="white-space: nowrap;">
-                                        Get OTP
-                                    </button>
-                                </div>
-                                <div id="otpMessage" class="mt-2 text-success" style="display: none; font-weight: 500;">
-                                    OTP sent successfully!
-                                </div>                                
-                            </div>                            
-                        </div>
-    
-                        <div class="text-center mt-4">
-                            <button type="submit" class="btn px-5 py-3 rounded-pill" style="
-                                font-size: 18px;
-                                font-weight: 600;
-                                background: linear-gradient(135deg, #831515, #db2e2e);
-                                color: #ffffff;
-                                border-radius: 30px;
-                                box-shadow: 0 5px 15px rgba(255, 0, 60, 0.382);
-                                transition: all 0.3s ease;
-                                border: none;
-                            "
-                            onmouseover="this.style.transform='scale(1.05)';"
-                            onmouseout="this.style.transform='scale(1)';"
-                            id="submitApplication">
-                                Submit Application
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-<!-- Form Section End -->
-
-
-<!-- Program Start -->
+<!-- How it works -->
 <div class="container-xxl py-5">
     <div class="container">
+         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h1 class="mb-5" style="
+                    font-family: 'Chunk Five', serif;
+                    font-size: 25px;
+                    color: #5f5fb3;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                ">How It Works</h1>
+            </div>
         <div class="row g-5 align-items-center">
             <!-- Text Section -->
             <div class="col-lg-6">
-                <h4 class="section-title bg-white text-start text-primary pe-3" 
-                    style="
-                        font-family: 'Chunk Five', serif;
-                        font-size: 25px;
-                        color: #000000;
-                        font-weight: 700;
-                        text-transform: uppercase;
-                    ">
-                    Program Highlights
-                </h4>
-                <br>
+                
+             
                 <div class="row gy-2 gx-4 mb-4">
                     <div class="col-12">
                         <p class="mb-0" style="
@@ -306,11 +209,11 @@
                             font-size: 14px;
                             color: #000000;
                         ">
-                            <i class="fa fa-graduation-cap text-primary me-2"></i>
-                            <strong style="font-family: 'League Spartan', sans-serif; font-size: 18px;">
-                                Eligibility:
+                            
+                            <img src="img/h1.webp" alt="">
+                            <strong style="font-family: 'League Spartan', sans-serif; font-size: 18px; padding-left: 5%;">
+                                Login to the platform
                             </strong>
-                            10+2 with a minimum of 50% marks in the best four subjects.
                         </p>
                     </div>
                     <div class="col-12">
@@ -319,11 +222,11 @@
                             font-size: 14px;
                             color: #000000;
                         ">
-                            <i class="fa fa-clock text-primary me-2"></i>
-                            <strong style="font-family: 'League Spartan', sans-serif; font-size: 18px;">
-                                Duration:
+                            <img src="img/h2.webp" alt="">
+                            <strong style="font-family: 'League Spartan', sans-serif; font-size: 18px;padding-left: 5%;">
+                                Describe your business and ideal customers
                             </strong>
-                            5 Years
+                            
                         </p>
                     </div>
                     <div class="col-12">
@@ -332,11 +235,11 @@
                             font-size: 14px;
                             color: #000000;
                         ">
-                            <i class="fa fa-wallet text-primary me-2"></i>
-                            <strong style="font-family: 'League Spartan', sans-serif; font-size: 18px;">
-                                Fees:
+                            <img src="img/h3.webp" alt="">
+                            <strong style="font-family: 'League Spartan', sans-serif; font-size: 18px;padding-left: 5%;">
+                                Al sets the best outreach strategy in 10 seconds
                             </strong>
-                            ₹30,000 per semester
+                           
                         </p>
                     </div>
                     <div class="col-12">
@@ -345,11 +248,11 @@
                             font-size: 14px;
                             color: #000000;
                         ">
-                            <i class="fa fa-check-circle text-primary me-2"></i>
-                            <strong style="font-family: 'League Spartan', sans-serif; font-size: 18px;">
-                                Recognition:
+                            <img src="img/h4.webp" alt="">
+                            <strong style="font-family: 'League Spartan', sans-serif; font-size: 18px;padding-left: 5%;">
+                                Find potential clients with contact details
                             </strong>
-                            Approved by the Bar Council of India (BCI)
+                            
                         </p>
                     </div>
                     <div class="col-12">
@@ -358,11 +261,11 @@
                             font-size: 14px;
                             color: #000000;
                         ">
-                            <i class="fa fa-book-open text-primary me-2"></i>
-                            <strong style="font-family: 'League Spartan', sans-serif; font-size: 18px;">
-                                Interdisciplinary Legal Studies:
+                            <img src="img/h5.webp" alt="">
+                            <strong style="font-family: 'League Spartan', sans-serif; font-size: 18px;padding-left: 5%;">
+                                Use AI generated outreach texts
                             </strong>
-                            Integration of law, economics, sociology, and political science.
+                            
                         </p>
                     </div>
                     <div class="col-12">
@@ -371,11 +274,10 @@
                             font-size: 14px;
                             color: #000000;
                         ">
-                            <i class="fa fa-gavel text-primary me-2"></i>
-                            <strong style="font-family: 'League Spartan', sans-serif; font-size: 18px;">
-                                Hands-on Training:
+                            <img src="img/h6.webp" alt="">
+                            <strong style="font-family: 'League Spartan', sans-serif; font-size: 18px;padding-left: 5%;">
+                                Schedule follow-ups and meetings
                             </strong>
-                            Moot courts, legal aid camps, corporate internships.
                         </p>
                     </div>
                     <div class="col-12">
@@ -384,119 +286,60 @@
                             font-size: 14px;
                             color: #000000;
                         ">
-                            <i class="fa fa-suitcase text-primary me-2"></i>
-                            <strong style="font-family: 'League Spartan', sans-serif; font-size: 18px;">
-                                Career Paths:
+                            <img src="img/h7.webp" alt="">
+                            <strong style="font-family: 'League Spartan', sans-serif; font-size: 18px;padding-left: 5%;">
+                                Make your sales pitch and generate new business
                             </strong>
-                            Corporate Lawyer, Legal Advisor, Civil Services, Judiciary, Policy Consultant.
                         </p>
                     </div>
                 </div>
             </div>
 
             <!-- Image Section -->
-            <div class="col-lg-6 d-flex justify-content-center align-items-center">
-                <img src="img/lawyer.jpg" alt="Program Image" class="img-fluid rounded shadow-lg" style="object-fit: cover;">
-            </div>
-        </div>
-
-        <!-- Centered Apply Now Button -->
-        <div class="row mt-4">
+            <div class="col-lg-6 justify-content-center align-items-center">
+                <img src="img/how_sec.webp" alt="Program Image" class="img-fluid rounded shadow-lg" style="object-fit: cover;">
+            
+     
+            <div class="row mt-4">
             <div class="col-12 d-flex justify-content-center">
                 <a href="#" class="btn btn-primary px-4 py-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#detailsModal" style="
                     font-size: 18px;
                     font-weight: 600;
-                    background-color: #831515;
+                    background-color: #696cc7;
                     color: #ffffff;
                     border-radius: 30px;
-                    box-shadow: 0 4px 8px rgba(255, 0, 60, 0.382);
+                    box-shadow: 0 4px 8px rgba(59, 101, 255, 0.382);
                     transition: all 0.4s ease;
-                "
-                onmouseover="this.style.backgroundColor='#db2e2e';"
-                onmouseout="this.style.backgroundColor='#831515';">
-                    Apply Now<i class="fa fa-arrow-right ms-2"></i>
-                </a>
+                    border-color: #696cc7;
+                "                
+                onmouseover="this.style.backgroundColor='#484cbd';"
+                onmouseout="this.style.backgroundColor='#696cc7';">
+                    Let's Connect         </a>
             </div>
         </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+        
     </div>
 </div>
 
-<!-- Program End -->
+<!-- How it works End -->
 
 
 
-<!-- About Start -->
-<!-- <style>
-    @import url('https://fonts.googleapis.com/css2?family=Chunk+Five&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-    h1, h2 {
-        font-family: 'Chunk Five', serif;
-    }
-
-    h1 {
-        font-size: 25px;
-    }
-
-    h2 {
-        font-size: 18px;
-    }
-
-    .sub-heading {
-        font-family: 'League Spartan', sans-serif;
-        font-size: 18px;
-    }
-
-    p, strong {
-        font-family: 'Poppins', sans-serif;
-        font-size: 14px;
-    }
-</style>
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <h2 class="section-title bg-white text-start text-primary pe-3">About Us</h2>
-                <br></br>
-                <p class="mb-4">Singhania University’s School of Law is built on
-                    the legacy of Dr. D.C. Singhania, a legal
-                    luminary, and Mr. Ravi Singhania, a leading
-                    corporate lawyer. Backed by Singhania &amp;
-                    Partners, one of India’s top law firms, our law
-                    programs integrate academic excellence with
-                    real-world legal practice.
-                </p> 
-                <p class="mb-4"><strong>A Green Campus for Focused Learning:</strong> 
-                   Located in Rajasthan, away from distractions,
-                    ideal for legal research and development.
-                </p> 
-                
-                <p class="mb-4"><strong>Singhania Law Firm Partnership:</strong> Hands
-                   on experience at Singhania &amp; Partners and
-                    other top law firms.
-                </p> 
-                
-                <p class="mb-4"><strong>100% Internship Guarantee:</strong> Ensuring
-                    practical legal training in corporate law,
-                    judiciary, and litigation.
-                </p>                    
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="img/female-library.jpg" alt="" style="object-fit: cover;">
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<!-- About End -->
-   
+  
 
     <!-- Service Start -->
     
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h1 class="mb-5" style="
@@ -524,9 +367,9 @@
                 }
             </style>
     
-            <!-- Top Grid -->
+            
             <div class="row g-4">
-                <!-- Litigation & Advocacy -->
+                
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
@@ -537,7 +380,7 @@
                     </div>
                 </div>
     
-                <!-- Corporate Law -->
+             
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
@@ -548,7 +391,6 @@
                     </div>
                 </div>
     
-                <!-- Legal Research & Academia -->
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
@@ -559,7 +401,6 @@
                     </div>
                 </div>
     
-                <!-- Civil Services -->
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
@@ -571,9 +412,7 @@
                 </div>
             </div>
     
-            <!-- Bottom Grid (Centered) -->
             <div class="row g-3 justify-content-center mt-2">
-                <!-- Judicial Services -->
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
@@ -584,7 +423,6 @@
                     </div>
                 </div>
     
-                <!-- Entrepreneurial Growth -->
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.6s">
                     <div class="service-item text-center pt-3">
                         <div class="p-4">
@@ -612,256 +450,380 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> -->
 <!-- Service End -->
 
 
 
- <!-- Why Choose Us Section Start -->
+ <!-- How we are different -->
  <div class="container py-5">
     <div class="text-center mb-5">
         <h2 style="
             font-family: 'Chunk Five', serif;
+            font-weight: 900;
             font-size: 25px;
-            color: #670a0a;
+            color: #696cc7;
             margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         ">
-            Why Choose Us?
-        </h2>        
+            How We Are Different and Better
+        </h2>
+        <h2 style="
+            font-family: 'Chunk Five', serif;
+            font-size: 20px;
+            color: #000000;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        ">
+            Alcelerate isn't just another tool - it's your growth engine
+        </h2>   
+        <h2 style="
+            font-family: 'Chunk Five', serif;
+            font-size: 14px;
+            color: #000000;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        ">
+            Here's what sets us apart
+        </h2>           
     </div>
 
     <div class="row g-4">
         <!-- Card 1 -->
         <div class="col-md-6 col-lg-4">
-            <div class="card border-0 shadow-sm h-100"
+            <div class="card cc border-0 shadow-sm h-100"
                 style="
-                    background-color: #fdfaf3;
+                    background: linear-gradient(135deg, #e7f5fc, #feffff);
                     padding: 20px;
                     border-radius: 16px;
                     transition: transform 0.3s ease;
                 "
-                onmouseover="this.style.transform='translateY(-5px)';"
-                onmouseout="this.style.transform='translateY(0)';">
+                >
+                <img src="img/hw1.webp" alt="">
                 <h5 style="
                     font-family: 'League Spartan', sans-serif;
                     font-size: 18px;
                     font-weight: 600;
-                    color: #670a0a;
+                    color: #000000;
                 ">
-                    BCI-Approved Law Degrees
+                    AI-Crafted messaging
                 </h5>
-                <p style="
-                    font-family: 'Poppins', sans-serif;
-                    font-size: 14px;
-                    color: #333333;
-                    line-height: 1.6;
-                ">
-                    Nationally recognized programs for legal practice.
-                </p>
+                
             </div>
         </div>
 
         <!-- Card 2 -->
         <div class="col-md-6 col-lg-4">
-            <div class="card border-0 shadow-sm h-100"
+            <div class="card cc border-0 shadow-sm h-100"
                 style="
-                    background-color: #fdfaf3;
+                    background: linear-gradient(135deg, #e7f5fc, #feffff);
                     padding: 20px;
                     border-radius: 16px;
                     transition: transform 0.3s ease;
                 "
-                onmouseover="this.style.transform='translateY(-5px)';"
-                onmouseout="this.style.transform='translateY(0)';">
+                >
+                <img src="img/hw2.webp" alt="">
                 <h5 style="
                     font-family: 'League Spartan', sans-serif;
                     font-size: 18px;
                     font-weight: 600;
-                    color: #670a0a;
+                    color: #000000;
                 ">
-                    Singhania Law Firm Partnership
+                    AI-Crafted messaging
                 </h5>
-                <p style="
-                    font-family: 'Poppins', sans-serif;
-                    font-size: 14px;
-                    color: #333333;
-                    line-height: 1.6;
-                ">
-                    Hands-on experience at Singhania & Partners and other top firms.
-                </p>
+                
             </div>
         </div>
 
         <!-- Card 3 -->
         <div class="col-md-6 col-lg-4">
-            <div class="card border-0 shadow-sm h-100"
+            <div class="card cc border-0 shadow-sm h-100"
                 style="
-                    background-color: #fdfaf3;
+                    background: linear-gradient(135deg, #e7f5fc, #feffff);
                     padding: 20px;
                     border-radius: 16px;
                     transition: transform 0.3s ease;
                 "
-                onmouseover="this.style.transform='translateY(-5px)';"
-                onmouseout="this.style.transform='translateY(0)';">
+                >
+                <img src="img/hw3.webp" alt="">
                 <h5 style="
                     font-family: 'League Spartan', sans-serif;
                     font-size: 18px;
                     font-weight: 600;
-                    color: #670a0a;
+                    color: #000000;                  
+                    
                 ">
-                    100% Internship Guarantee
+                    Fully automated workflow
                 </h5>
-                <p style="
-                    font-family: 'Poppins', sans-serif;
-                    font-size: 14px;
-                    color: #333333;
-                    line-height: 1.6;
-                ">
-                    Practical training in corporate law, judiciary, and litigation.
-                </p>
+                
+            </div>
+        </div>
+
+        
+    </div>
+
+    
+</div>
+<style>
+    .cc {
+        flex-direction: row !important;
+    }
+</style>
+<!--  How we are Section End -->
+
+
+
+
+
+
+
+<!-- Guarantee Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            
+            <!-- Image Section -->
+            <div class="col-lg-6 justify-content-center align-items-center">
+                <h4 class=" bg-white text-start pe-3" 
+                    style="
+                        font-family: 'Chunk Five', serif;
+                        font-size: 25px;
+                        color: #696cc7;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                    ">
+                    Our Guarantee
+                </h4>
+                <img src="img/fifty.webp" alt="Program Image" class="img-fluid rounded shadow-lg" style="object-fit: cover;">
+            </div>
+
+            <!-- Text Section -->
+            <div class="col-lg-6">
+                <h4 class="bg-white text-start pe-3" 
+                    style="
+                        font-family: 'Chunk Five', serif;
+                        font-size: 20px;
+                        color: #000000;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                    ">
+                    We deliver or you don’t pay — simple as that
+                </h4>
+                <br>
+                <div class="row gy-2 gx-4 mb-4">
+                    <div class="col-12">
+                        <p class="mb-0" style="
+                            font-family: 'Poppins', sans-serif;
+                            font-size: 14px;
+                            color: #000000;
+                        ">
+                            <img src="img/tick.webp" alt="">                           
+                            3–5 qualified meetings per industry                        
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <p class="mb-0" style="
+                            font-family: 'Poppins', sans-serif;
+                            font-size: 14px;
+                            color: #000000;
+                        ">
+                            <img src="img/tick.webp" alt="">                           
+                             $500 in guaranteed lead value
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <p class="mb-0" style="
+                            font-family: 'Poppins', sans-serif;
+                            font-size: 14px;
+                            color: #000000;
+                        ">
+                            <img src="img/tick.webp" alt="">                           
+                            Refund if we don’t deliver
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <p class="mb-0" style="
+                            font-family: 'Poppins', sans-serif;
+                            font-size: 14px;
+                            color: #000000;
+                        ">
+                            <img src="img/tick.webp" alt="">                           
+                            Transparent dashboards with performance metrics
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <p class="mb-0" style="
+                            font-family: 'Poppins', sans-serif;
+                            font-size: 14px;
+                            color: #000000;
+                        ">
+                            <img src="img/tick.webp" alt="">                           
+                            Minimum commitment: 3 months or 6 months
+
+                        </p>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+
+        </div>
+
+        
+    </div>
+</div>
+
+<!-- Guarantee End -->
+
+<!-- Ideal For -->
+ <div class="container py-5">
+    <div class="text-center mb-5">
+        <h2 style="
+            font-family: 'Chunk Five', serif;
+            font-size: 25px;
+            color: #696cc7;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        ">
+            Ideal For
+        </h2>        
+        <h3 style="
+            font-family: 'Chunk Five', serif;
+            font-size: 20px;
+            color: #000000;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        ">
+            Tailored Systems for each industry
+        </h3>   
+        <h2 style="
+            font-family: 'Chunk Five', serif;
+            font-size: 14px;
+            color: #000000;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        ">
+            We’ve built high-performing outbound funnels across sectors like:
+        </h2>           
+    </div>
+
+    <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow-sm"   
+            style="
+                    background-color: #ffffff;
+                    border-radius: 16px;
+                    transition: transform 0.3s ease;
+                "         
+                onmouseover="this.style.transform='translateY(-5px)';"
+                onmouseout="this.style.transform='translateY(0)';">
+                <img src="img/I1.webp" alt="">              
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow-sm"   
+            style="
+                    background-color: #ffffff;
+                    border-radius: 16px;
+                    transition: transform 0.3s ease;
+                "         
+                onmouseover="this.style.transform='translateY(-5px)';"
+                onmouseout="this.style.transform='translateY(0)';">
+                <img src="img/I2.webp" alt="">              
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow-sm"   
+            style="
+                    background-color: #ffffff;
+                    border-radius: 16px;
+                    transition: transform 0.3s ease;
+                "         
+                onmouseover="this.style.transform='translateY(-5px)';"
+                onmouseout="this.style.transform='translateY(0)';">
+                <img src="img/I3.webp" alt="">              
             </div>
         </div>
 
         <!-- Card 4 -->
         <div class="col-md-6 col-lg-4">
-            <div class="card border-0 shadow-sm h-100"
-                style="
-                    background-color: #fdfaf3;
-                    padding: 20px;
+            <div class="card border-0 shadow-sm"   
+            style="
+                    background-color: #ffffff;
                     border-radius: 16px;
                     transition: transform 0.3s ease;
-                "
+                "         
                 onmouseover="this.style.transform='translateY(-5px)';"
                 onmouseout="this.style.transform='translateY(0)';">
-                <h5 style="
-                    font-family: 'League Spartan', sans-serif;
-                    font-size: 18px;
-                    font-weight: 600;
-                    color: #670a0a;
-                ">
-                    Industry-Integrated Curriculum
-                </h5>
-                <p style="
-                    font-family: 'Poppins', sans-serif;
-                    font-size: 14px;
-                    color: #333333;
-                    line-height: 1.6;
-                ">
-                    Covering Corporate Law, Criminal Law, Human Rights, and more.
-                </p>
+                <img src="img/I4.webp" alt="">              
             </div>
         </div>
 
         <!-- Card 5 -->
         <div class="col-md-6 col-lg-4">
-            <div class="card border-0 shadow-sm h-100"
-                style="
-                    background-color: #fdfaf3;
-                    padding: 20px;
+            <div class="card border-0 shadow-sm"   
+            style="
+                    background-color: #ffffff;
                     border-radius: 16px;
                     transition: transform 0.3s ease;
-                "
+                "         
                 onmouseover="this.style.transform='translateY(-5px)';"
                 onmouseout="this.style.transform='translateY(0)';">
-                <h5 style="
-                    font-family: 'League Spartan', sans-serif;
-                    font-size: 18px;
-                    font-weight: 600;
-                    color: #670a0a;
-                ">
-                    Moot Court & Legal Aid Clinics
-                </h5>
-                <p style="
-                    font-family: 'Poppins', sans-serif;
-                    font-size: 14px;
-                    color: #333333;
-                    line-height: 1.6;
-                ">
-                    Real-world legal training from day one.
-                </p>
+                <img src="img/I5.webp" alt="">              
             </div>
         </div>
 
         <!-- Card 6 -->
         <div class="col-md-6 col-lg-4">
-            <div class="card border-0 shadow-sm h-100"
-                style="
-                    background-color: #fdfaf3;
-                    padding: 20px;
+            <div class="card border-0 shadow-sm"   
+            style="
+                    background-color: #ffffff;
                     border-radius: 16px;
                     transition: transform 0.3s ease;
-                "
+                "         
                 onmouseover="this.style.transform='translateY(-5px)';"
                 onmouseout="this.style.transform='translateY(0)';">
-                <h5 style="
-                    font-family: 'League Spartan', sans-serif;
-                    font-size: 18px;
-                    font-weight: 600;
-                    color: #670a0a;
-                ">
-                    Global Library Access
-                </h5>
-                <p style="
-                    font-family: 'Poppins', sans-serif;
-                    font-size: 14px;
-                    color: #333333;
-                    line-height: 1.6;
-                ">
-                    Resources from British Council, AIU, and the American Library Association.
-                </p>
+                <img src="img/I6.webp" alt="">              
             </div>
         </div>
 
-        <!-- Centered Last Card -->
-        <div class="col-md-6 col-lg-4 mx-auto">
-            <div class="card border-0 shadow-sm h-100"
-                style="
-                    background-color: #fdfaf3;
-                    padding: 20px;
-                    border-radius: 16px;
-                    transition: transform 0.3s ease;
-                "
-                onmouseover="this.style.transform='translateY(-5px)';"
-                onmouseout="this.style.transform='translateY(0)';">
-                <h5 style="
-                    font-family: 'League Spartan', sans-serif;
-                    font-size: 18px;
-                    font-weight: 600;
-                    color: #670a0a;
-                ">
-                    Scholarships & Financial Aid
-                </h5>
-                <p style="
-                    font-family: 'Poppins', sans-serif;
-                    font-size: 14px;
-                    color: #333333;
-                    line-height: 1.6;
-                ">
-                    Making legal education accessible to all.
-                </p>
-            </div>
-        </div>
+
+
+        
     </div>
 
-    <div class="d-flex justify-content-center p-2">
-        <a href="#" class="btn btn-primary px-4 py-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#detailsModal" style="
-            font-size: 18px;
+    <div class="row mt-4">
+            <div class="col-12 d-flex justify-content-center">
+                <a href="#" class="btn btn-primary px-4 py-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#detailsModal" style="
+                    font-size: 18px;
                     font-weight: 600;
-                    background-color: #831515;
+                    background-color: #696cc7;
                     color: #ffffff;
                     border-radius: 30px;
-                    box-shadow: 0 4px 8px rgba(255, 0, 60, 0.382);
-                    transition: all 0.4s ease;                        
-        "
-        onmouseover="this.style.backgroundColor='#db2e2e';"
-        onmouseout="this.style.backgroundColor='#831515';">
-            Apply Now<i class="fa fa-arrow-right ms-2"></i>
-        </a>
-    </div>
+                    box-shadow: 0 4px 8px rgba(59, 101, 255, 0.382);
+                    transition: all 0.4s ease;
+                    border-color: #696cc7;
+                "                
+                onmouseover="this.style.backgroundColor='#484cbd';"
+                onmouseout="this.style.backgroundColor='#696cc7';">
+                    Find Your Next Clients        </a>
+            </div>
+        </div>
+
 </div>
 
-<!-- Why Choose Us Section End -->
+<!-- Ideal for Section End -->
 
 
 
@@ -879,7 +841,7 @@
                 </div> -->
                 <!-- Right Side - Form Section -->
                 <div class="modal-body flex-grow-1">
-                    <div class="modal-header text-white rounded-top-4" style="background: linear-gradient(135deg, #670a0a, #a50f0f);">
+                    <div class="modal-header text-white rounded-top-4" style="background: linear-gradient(135deg, #3e40bf, #696cc7);">
                         <h5 class="modal-title text-white fw-bold" id="detailsModalLabel" style="font-family: 'Chunk Five', serif; font-size: 25px;">Please Submit Your Details</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
@@ -923,19 +885,7 @@
                                 </div>
                                 
                             </div>
-                            <div class="mb-3 sendOtpBtn">
-                                <label for="otp" class="form-label" style="font-family: 'league spartan', serif; font-size: 18px;">
-                                    Enter OTP
-                                </label>
-                                <div class="input-group">
-                                    <span class="input-group-text bg-light"><i class="bi bi-shield-lock"></i></span>
-                                    <input type="text" class="form-control" id="otpPopup" placeholder="Enter OTP">
-                                    <button type="button" class="btn btn-outline-danger" id="popupOtp">Get OTP</button>
-                                </div>
-                                <div id="popupOtpMessage" class="mt-2 text-success" style="display: none; font-weight: 500;">
-                                    OTP sent successfully!
-                                </div>
-                            </div>
+                            
                             <div class="d-flex justify-content-between mt-4">
                                 <button type="button" class="btn btn-outline-secondary px-4 py-2" data-bs-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-primary px-4 py-2" id="submitForm">Submit</button>
@@ -1140,503 +1090,12 @@
     }
 </style>
 
-<div class="container-fluid py-5 custom-container">
-    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-        <h4 class="section-title bg-white text-primary px-3">Campus Facilities</h4>
-        <br></br>
-    </div>
-    
-    <div class="overlay-container">
-        <img src="img/cat-4enhanced.png" alt="Campus Image" class="overlay-image">
-
-        <div class="overlay-content">
-            <!-- Left Column -->
-            <div class="overlay-column">
-                <div class="overlay-item">
-                    <i class="fa fa-gavel"></i>
-                    <p><strong>Dedicated Moot Court:</strong> Simulated legal training & case law studies.</p>
-                </div>
-                <div class="overlay-item">
-                    <i class="fa fa-building"></i>
-                    <p><strong>State-of-the-Art Infrastructure:</strong> Smart classrooms, digital libraries & research centers.</p>
-                </div>               
-            </div>
-
-            <!-- Right Column -->
-            <div class="overlay-column">
-                <div class="overlay-item">
-                    <i class="fa fa-bed"></i>
-                    <p><strong>On-Campus Hostel & Mess:</strong> Safe & comfortable residential facilities.</p>
-                </div>
-                <div class="overlay-item">
-                    <i class="fa fa-book"></i>
-                    <p><strong>Global Library Access:</strong> Resources from British Council, AIU, and American Library Association.</p>
-                </div>                        
-            </div>
-        </div>
-    </div>
-</div>
-
-    
-<!-- Facilities End -->    
-
-
-<!-- Affiliates Start -->
-
-<div class="container py-5">
-    <h2 class="main-heading">Available Scholarships</h2>
-
-    <div class="row justify-content-center">
-        <!-- Merit-Based Scholarships -->
-        <div class="col-md-5 mb-4">
-            <div class="scholarship-box merit-based">
-                <h4 class="scholarship-title">Merit-Based Scholarships</h4>
-                <ul class="scholarship-text">
-                    <li>50% tuition fee waiver for students scoring 75% & above in 10+2.</li>
-                    <li>25% tuition fee waiver for students scoring 60%-74% in 10+2.</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Sports Excellence Scholarships -->
-        <div class="col-md-5 mb-4">
-            <div class="scholarship-box sports-excellence">
-                <h4 class="scholarship-title">Sports Excellence Scholarships</h4>
-                <ul class="scholarship-text">
-                    <li>100% Scholarship for National/International medalists.</li>
-                    <li>70% Scholarship for State-level medalists.</li>
-                    <li>30% Scholarship for District-level medalists.</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Women Empowerment Scholarships -->
-        <div class="col-md-5 mb-4">
-            <div class="scholarship-box women-empowerment" style="min-height: 19vh;">
-                <h4 class="scholarship-title">Women Empowerment Scholarships</h4>
-                <p class="scholarship-text">
-                    35% fee concession for female students enrolling in 2025-26.
-                </p>
-            </div>
-        </div>
-
-        <!-- D.C. Singhania Memorial Scholarship -->
-        <div class="col-md-5 mb-4">
-            <div class="scholarship-box dc-singhania">
-                <h4 class="scholarship-title">D.C. Singhania Memorial Scholarship</h4>
-                <p class="scholarship-text">
-                    Scholarships for students excelling in academics, sports, and social service.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <p class="note text-center mt-4">
-        <em>Note: Scholarships for undergraduate students apply for Year 1 and are renewable based on academic performance.</em>
-    </p>
-</div>
-
-<!-- Affiliates End -->
-<!-- Available Scholarships Section Start -->
-<style>
-    /* Typography Settings */
-    @import url('https://fonts.googleapis.com/css2?family=Chunk+Five&family=League+Spartan:wght@400;600&family=Poppins:wght@400;600&display=swap');
-
-    /* General Styling */
-    .container {
-        font-family: 'Poppins', sans-serif;
-    }
-
-    /* Heading 1 */
-    .main-heading {
-        font-family: 'Chunk Five', serif;
-        font-size: 25px;
-        font-weight: 700;
-        color: #670a0a;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    /* Heading 2 */
-    .scholarship-title {
-        font-family: 'League Spartan', sans-serif;
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 10px;
-        line-height: 1.4;
-    }
-
-    /* Body Text */
-    .scholarship-text,
-    .note {
-        font-family: 'Poppins', sans-serif;
-        font-size: 14px;
-        color: #333333;
-        line-height: 1.6;
-    }
-
-    /* Scholarship Box Styling */
-    .scholarship-box {
-        padding: 30px;
-        border-left: 6px solid;
-        background-color: #fdfaf3;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        transition: transform 0.3s ease;
-    }
-
-    .scholarship-box:hover {
-        transform: translateY(-5px);
-    }
-
-    /* Scholarship Color Variants */
-    .merit-based {
-        border-color: #670a0a;
-        background-color: #fdfaf3;
-    }
-
-    .sports-excellence {
-        border-color: #004a99;
-        background-color: #f0f6ff;
-    }
-
-    .women-empowerment {
-        border-color: #cc3366;
-        background-color: #fff0f5;
-    }
-
-    .dc-singhania {
-        border-color: #006400;
-        background-color: #f3fff3;
-    }
-
-    /* Responsive Layout */
-    @media (max-width: 768px) {
-        .main-heading {
-            font-size: 22px;
-        }
-        .scholarship-title {
-            font-size: 16px;
-        }
-        .scholarship-text,
-        .note {
-            font-size: 12px;
-        }
-        .my-5{
-            margin-top: 0rem !important;
-
-        }        
-    }
-</style>
-
-<div class="container my-5">
-    <h2 class="main-heading text-center mb-4">Affiliations & Accreditations</h2>
-    <div class="logo-gallery">
-       <div class="logo-item"><img src="img/spic.png" alt="SPIC MACAY"></div>
-       <div class="logo-item"><img src="img/CII.png" alt="CII"></div>
-       <div class="logo-item"><img src="img/FICCI_logo.svg.png" alt="FICCI"></div>
-       <div class="logo-item"><img src="img/Association_of_Indian_Universities_Logo.svg.png" alt="AIU"></div>
-       <div class="logo-item"><img src="img/british-council.png" alt="British Council"></div>
-       <div class="logo-item"><img src="img/ala.png" alt="ALA"></div>
-       <div class="logo-item"><img src="img/logo (1).png" alt="AIMA"></div>
-       <div class="logo-item"><img src="img/cliq_india-1.png" alt="CliQ India"></div>
-       <div class="logo-item"><img src="img/ASSOCHAM_New_Logo.png" alt="ASSOCHAM"></div>
-       <div class="logo-item"><img src="img/bhavan-logo.png" alt="Bhavan"></div>
-       <div class="logo-item"><img src="img/acu_logo.png" alt="ACU"></div>
-       <div class="logo-item"><img src="img/PHD.png" alt="PHD"></div>
-    </div>
- </div>
- 
- <!-- CSS for Styling -->
- <style>
-    .logo-gallery {
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: center;
-       gap: 20px;
-       background: #f8f9fa;
-       padding: 30px;
-       border-radius: 15px;
-       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .logo-item {
-       width: 150px;
-       height: 150px;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       background: #fff;
-       border-radius: 10px;
-       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-       padding: 15px;
-       transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .logo-item img {
-       max-width: 100%;
-       max-height: 100%;
-       object-fit: contain;
-       filter: grayscale(50%);
-       transition: all 0.3s ease-in-out;
-    }
-    .logo-item:hover {
-       transform: scale(1.1) rotate(5deg);
-       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    }
-    .logo-item:hover img {
-       filter: grayscale(0%);
-    }
-    @media (max-width: 768px) {
-        .logo-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            justify-content: center;
-        }
-        .logo-item {
-            width: 100px;
-            height: 100px;
-        }
-    }
-    @media (max-width: 360px) {
-        .logo-item {
-            width: 75px;
-            height: 75px;
-            padding: 5px;
-        }
-    }
-    @media (max-width: 319px) {
-        .logo-item {
-            width: 55px;
-            height: 55px;
-            padding: 5px;
-        }
-    }
- </style>
-<!-- Available Scholarships Section End -->
-    
-<!-- Form Section Start -->
-<div class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <div class="card p-4 border-0 shadow-lg" style="
-                border-radius: 15px;
-                background: rgba(255, 255, 255, 0.2);
-                backdrop-filter: blur(10px);
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            ">
-                <h2 class="text-center" style="
-                    font-family: 'Chunk Five', serif;
-                    font-size: 28px;
-                    font-weight: 700;
-                    color: #831515;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                ">
-                    Apply Now
-                </h2>
-
-                <form>
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <label class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="secondFormName" required style="
-                                border-radius: 8px;
-                                padding: 14px;
-                                border: 1px solid #ddd;
-                                box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-                                transition: 0.3s ease;
-                            ">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label">WhatsApp Number</label>
-                            <input type="tel" class="form-control" id="secondFormWhatsapp" required style="
-                                border-radius: 8px;
-                                padding: 14px;
-                                border: 1px solid #ddd;
-                                box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-                            ">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="secondFormEmail" required style="
-                                border-radius: 8px;
-                                padding: 14px;
-                                border: 1px solid #ddd;
-                                box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-                            ">
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="form-label">City of Residence</label>
-                            <input type="text" class="form-control" id="secondFormCity" required style="
-                                border-radius: 8px;
-                                padding: 14px;
-                                border: 1px solid #ddd;
-                                box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-                            ">
-                        </div>
-
-                        <div class="col-md-12">
-                            <label class="form-label">Convenient Time to Connect</label>
-<input 
-    type="text" 
-    class="form-control" 
-    id="secondFormTime" 
-    required 
-    placeholder="e.g., 3:00 PM – 4:00 PM"
-    style="
-        border-radius: 8px;
-        padding: 14px;
-        border: 1px solid #ddd;
-        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-    "
->
-
-                        </div>
-                        <div class="col-md-12 sendOtpBtn">
-                            <label class="form-label">Enter OTP</label>
-                            <div class="d-flex">
-                                <input type="text" class="form-control me-2" id="otpSecondField" placeholder="Enter OTP" required style="
-                                    border-radius: 8px;
-                                    padding: 14px;
-                                    border: 1px solid #ddd;
-                                    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-                                ">
-                                <button type="button" class="btn btn-outline-danger rounded-pill" id="secondFormOtp" style="white-space: nowrap;">
-                                    Get OTP
-                                </button>
-                            </div>
-                            <div id="secondOtpMessage" class="mt-2 text-success" style="display: none; font-weight: 500;">
-                                OTP sent successfully!
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-center mt-4">
-                        <button type="submit" class="btn px-5 py-3 rounded-pill" style="
-                            font-size: 18px;
-                            font-weight: 600;
-                            background: linear-gradient(135deg, #831515, #db2e2e);
-                            color: #ffffff;
-                            border-radius: 30px;
-                            box-shadow: 0 5px 15px rgba(255, 0, 60, 0.382);
-                            transition: all 0.3s ease;
-                            border: none;
-                        "
-                        onmouseover="this.style.transform='scale(1.05)';"
-                        onmouseout="this.style.transform='scale(1)';"
-                        id="SecondFormSubmitApplication">
-                            Submit Application
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Form Section End -->
-
-
-    
        
         
 
-    <!-- Footer Start -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Chunk+Five&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-    
-        h1, h2, h4 {
-            font-family: 'Chunk Five', serif;
-        }
-    
-        h1 {
-            font-size: 25px;
-        }
-    
-        h2, h4 {
-            font-size: 18px;
-        }
-    
-        p, a, strong {
-            font-family: 'Poppins', sans-serif;
-            font-size: 14px;
-        }
-    
-        .btn-primary {
-            font-size: 14px;
-            font-weight: 600;
-            background-color: #831515;
-            color: #ffffff;
-            border-radius: 30px;
-            box-shadow: 0 4px 8px rgba(255, 0, 60, 0.382);
-            transition: all 0.4s ease;
-        }
-    
-        .btn-primary:hover {
-            background-color: #db2e2e;
-        }
-    
-        .apply-link {
-            color: #ffffff;
-            cursor: pointer;
-            font-size: 14px;
-            display: inline-block;
-            transition: color 0.3s ease;
-        }
-    
-        .apply-link:hover {
-            color: #831515 !important;
-        }
-    </style>
-    
-    <div class="container-fluid bg-dark text-light footer pt-3 mt-1 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-6 col-md-6">
-                    <h4 class="text-white mb-3">Contact Us</h4>
-                    <p class="mb-2">
-                        <i class="fa fa-map-marker-alt me-3"></i>
-                        Singhania University, Pacheri Bari, Jhunjhunu - 333515, Rajasthan, India
-                    </p>
-                    <p class="mb-2">
-                        <i class="fa fa-envelope me-3"></i>
-                        admissions@singhaniauniversity.com
-                    </p>
-                    <p class="mb-2">
-                        <i class="fa fa-phone-alt me-3"></i>
-                        +91 9355168880
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Admission Open</h4>
-                    <a href="#" class="btn btn-primary px-3 py-2 rounded-pill" data-bs-toggle="modal" data-bs-target="#detailsModal">
-                        Apply Now<i class="fa fa-arrow-right ms-2"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Singhania University</a>, All Right Reserved.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Footer End -->
-
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a> -->
 
 
     <!-- JavaScript Libraries -->
@@ -1660,26 +1119,7 @@
 <!-- Scripts at the end of body -->
 
 <script>
-    function getUTMParameters() {
-        let fullUrl = window.location.href;
-        const urlParams = new URLSearchParams(window.location.search);
-        const utmSource = urlParams.get('utm_source') ?? '';
-        const utmMedium = urlParams.get('utm_medium') ?? '';
-        const utmCampaign = urlParams.get('utm_campaign') ?? '';
-        sessionStorage.setItem('utm_source', utmSource);
-        sessionStorage.setItem('utm_medium', utmMedium);
-        sessionStorage.setItem('utm_campaign', utmCampaign);
-        sessionStorage.setItem('url', fullUrl);
-        if(utmSource && utmSource.toLowerCase() == 'partnerotp'){
-            $('#SecondFormSubmitApplication').prop('disabled', true);
-            $('#submitForm').prop('disabled', true);
-            $('#submitApplication').prop('disabled', true);
-        }
-        else{
-            $('.sendOtpBtn').css("display", "none");
-        }
-    }
-    getUTMParameters();
+    
 //     document.addEventListener("DOMContentLoaded", function () {
 //     let select1 = document.getElementById("connectTime");
 //     let select2 = document.getElementById("mainFormTime");
