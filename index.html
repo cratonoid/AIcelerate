@@ -22,6 +22,8 @@
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -574,9 +576,223 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 </style>
 <!--  How we are Section End -->
 
+<style>
+  .accordion-section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #696cc7;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: #000;
+    background-color: #f8f9fa;
+  }
+
+  .accordion-button {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.25rem; /* Reduced horizontal padding */
+    background-color: transparent !important;
+    color: inherit;
+    box-shadow: none;
+    font-size: 1.5rem;
+  }
+
+  .accordion-item .accordion-button i {
+    color: #696cc7 !important;
+  }
+
+  .vs-text {
+    font-weight: bold;
+    color: #696cc7;
+    margin: 0 1rem;
+  }
+
+  .btn-demo {
+    background-color: #696cc7;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: 500;
+  }
+
+  .accordion-body {
+    padding: 1.25rem;
+  }
+  .accordion-button::after {
+    order: -1; /* Move arrow to the left */
+    margin-right: 0.5rem;
+    margin-left: 0;
+  }
+
+  .accordion-button.custom-accordion-button {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2.5rem; /* give space after the arrow */
+  }
+
+  .accordion-button .row {
+    margin: 0;
+  }
+
+  .accordion-button .col-md-5,
+  .accordion-button .col-md-2 {
+    padding: 0;
+  }
+  .no-button-style {
+    background: none;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1rem; /* optional, to retain spacing */
+    text-align: left;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #696cc7;
+    }
+
+    .accordion-button::after {
+    transform: rotate(0deg) !important;
+    }
+    .accordion-item {
+    border-bottom: 1px solid #696cc7;
+    border-left: 0px; 
+    border-right: 0px;/* Replace with your desired color */
+    }
+</style>
 
 
+<div class="container">
+  <div class="accordion" id="leadComparison">
+    <div class="accordion-section-title">How We Compare with Other Lead Generation Tactics</div>
 
+    <!-- Paid Channels -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <div class="accordion-button custom-accordion-button no-button-style" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            <div class="row w-100 align-items-center">
+                <div class="col-md-4 d-flex align-items-center">
+                    <i class="me-2 bi bi-megaphone"></i>
+                    <span class="fw-bold">Paid Channels</span>
+                </div>
+                <div class="col-md-2 text-center fw-bold vs-text">Vs</div>
+                <div class="col-md-4 align-items-center fw-bold">Alcelerate</div>
+            </div>
+        </div>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#leadComparison">
+        <div class="accordion-body row">
+          <div class="col-md-1"></div>
+          <div class="col-md-4">
+            <p>If your business relies on performance marketing or media buying, i.e. paid ads on platforms like Google, Meta, or LinkedIn—you will generate traffic, leads, and sales as long as the ad spend continues. However, once the spending stops, so does lead generation.</p>
+            <p>Increasing lead volume requires higher budgets, making it a continuous and often significant expense.</p>
+            <p>This approach also assumes your business has already identified effective strategies and possesses the necessary expertise to manage campaigns successfully—an area where many businesses face early challenges.</p>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-4">
+            <p>Instead of spending time finding the right paid lead strategy and building the skills to execute it, Alcelerate simplifies the process.</p>
+            <p>Just share your business and ideal customer profile—like an elevator pitch—and our AI delivers relevant contacts with their details.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Organic Channels -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <div class="accordion-button custom-accordion-button no-button-style" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+
+            <div class="row w-100 align-items-center">
+                <div class="col-md-4 d-flex align-items-center">
+                    <i class="me-2 bi bi-award"></i>
+                    <span class="fw-bold">Organic Channels</span>
+                </div>
+                <div class="col-md-2 text-center fw-bold vs-text">Vs</div>
+                <div class="col-md-4 align-items-center fw-bold">Alcelerate</div>
+            </div>
+        </div>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#leadComparison">
+        <div class="accordion-body row">
+            <div class="col-md-1"></div>
+          <div class="col-md-4">
+            <p>Organic channels like SEO and content marketing take time and ongoing effort. Lead generation is slow and results often depend on rankings, social traction, or platform algorithms.</p>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-4">
+            <p>Alcelerate provides instant lead generation based on your input, without months of setup or dependency on external platforms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other Databases -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <div class="accordion-button custom-accordion-button no-button-style" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+
+            <div class="row w-100 align-items-center">
+                <div class="col-md-4 d-flex align-items-center">
+                    <i class="me-2 bi bi-database"></i>
+                    <span class="fw-bold">Other Databases</span>
+                </div>
+                <div class="col-md-2 text-center fw-bold vs-text">Vs</div>
+                <div class="col-md-4 align-items-center fw-bold">Alcelerate</div>
+            </div>
+        </div>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#leadComparison">
+        <div class="accordion-body row">
+            <div class="col-md-1"></div>
+          <div class="col-md-4">
+            <p>Generic contact databases often lack freshness, relevance, and targeting. Outreach is usually cold and low-converting.</p>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-4">
+            <p>Alcelerate delivers contacts filtered to your niche with verified relevance, boosting conversions and saving time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mass Messaging -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+         <div class="accordion-button custom-accordion-button no-button-style" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+
+            <div class="row w-100 align-items-center">
+                <div class="col-md-4 d-flex align-items-center">
+                    <i class="me-2 bi bi-chat-dots"></i>
+                    <span class="fw-bold">Mass Messaging</span>
+                </div>
+                <div class="col-md-2 text-center fw-bold vs-text">Vs</div>
+                <div class="col-md-4 align-items-center fw-bold">Alcelerate</div>
+            </div>
+        </div>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#leadComparison">
+        <div class="accordion-body row">
+            <div class="col-md-1"></div>
+          <div class="col-md-4">
+            <p>Mass emails or WhatsApp blasts are often seen as spam and face high bounce rates or bans.</p>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-4">
+            <p>With Alcelerate, you get warm leads, not just random contacts—allowing for smarter, more personalized outreach.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="text-center mt-4">
+    <button class="btn btn-demo">Book a free demo</button>
+  </div>
+</div>
 
 
 
@@ -824,6 +1040,79 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 </div>
 
 <!-- Ideal for Section End -->
+<div class="container my-5" style="background-image: url('/img/Asset 85.jpg'); background-size: cover; background-position: center; min-height: 800px;">
+  <!-- Heading -->
+  <div class="text-center mb-5 py-5">
+    <h2 class="fw-bold" style="color: #696cc7;">Reviews</h2>
+    <h5 class="fw-semibold">Real Users. Real Results. Real Revenue.</h5>
+    <p class="text-muted">Don’t just take our word for it – here’s what our clients say:</p>
+  </div>
+</div>
+
+
+<div class="container my-5">
+  <div class="row align-items-center p-4">
+    <!-- Image and Name -->
+    <div class="col-md-3 text-center">
+      <img src="/img/Asset 89.jpg" alt="Anastasia Human" class="rounded-circle img-fluid" style="width: 150px; height: 150px; object-fit: cover;">
+      <p class="mt-3 mb-0 fw-bold">Anastasia Human</p>
+      <p class="text-muted">CEO, DELIVERED.</p>
+    </div>
+
+    <!-- Text Content -->
+    <div class="col-md-9">
+      <h3 class="fw-bold" style="color: #696cc7;">Success Story</h3>
+      <p>
+        The CEO of DELIVERED, Anastasia Human, used the Alcelerate to conduct targeted outreach.
+        She sent approximately 80 cold emails to potential partners and clients via the platform.
+      </p>
+      <p>As a result, the company secured below meeting:</p>
+      <ul class="ps-3">
+        <li>A meeting with the Director of a contemporary art gallery in Eastern Europe.</li>
+        <li>A meeting with the Founder and CEO of a Saudi Arabian event production agency (Magentaco).</li>
+        <li>A meeting with the CEO of a UAE-based experiential agency (Mosaic Live).</li>
+      </ul>
+      <p>
+        As a result of using Alcelerate, DELIVERED, initiated dialogues with key decision-makers in their target verticals:  
+        media art, immersive shows, and branded experiences. They evaluated the outcome from the service at $50k deal.
+      </p>
+      <p class="fst-italic text-muted text-end mt-3">More case studies available on request.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="row align-items-center">
+    <!-- Left Column: Text Content -->
+    <div class="col-md-8">
+      <h2 class="fw-bold" style="color: #696cc7;">Who We Are</h2>
+      <p>
+        Alcelerate is the AI sales engine built for B2B founders and growth teams who need pipeline, not promises.
+        We turn outbound chaos into booked meetings—fast.
+      </p>
+      <p>
+        Our platform automates your entire GTM motion: identifying qualified leads from a 1B+ contact database,
+        sending hyper-personalized outreach, and booking sales meetings—all from a single, unified dashboard.
+      </p>
+      <p>
+        Built by a team of $100M-exit and Forbes 30 Under 30 founders, Alcelerate blends smart AI with real sales execution.
+        No more hours lost on LinkedIn or manual cold outreach. Just strategy, leads, and booked calls—all in one place.
+      </p>
+      <a href="#" class="btn btn-primary rounded-pill px-4 py-2 mt-3" style="background-color: #696cc7; border-color: #696cc7;">
+        Grow Your Business
+      </a>
+    </div>
+
+    <!-- Right Column: Image and Name -->
+    <div class="col-md-4 text-center mt-4 mt-md-0">
+      <img src="/img/Asset 91.jpg" alt="Anastasia Denisova"
+           class="rounded-circle img-fluid mb-3"
+           style="width: 180px; height: 180px; object-fit: cover;">
+      <p class="fw-bold mb-0">Anastasia Denisova</p>
+      <p class="text-muted">Co-Founder, Alcelerate<br>Forbes 30 Under 30</p>
+    </div>
+  </div>
+</div>
 
 
 
