@@ -205,16 +205,77 @@
 
     $("#detailsModal").css("display", "none");
     $(".modal-backdrop").remove();
+    // $.ajax({
+    //   url: scriptURL,
+    //   type: "POST",
+    //   data: formData,
+    //   contentType: "application/x-www-form-urlencoded",
+    //   success: function (response) {
+    //     console.log("Form submitted successfully", response);
+    //   },
+    //   error: function (xhr, status, error) {
+    //     console.error("AJAX Error:", error);
+    //   },
+    // });
+    // Submit to your existing backend (Google Sheet or other script)
     $.ajax({
       url: scriptURL,
       type: "POST",
       data: formData,
       contentType: "application/x-www-form-urlencoded",
       success: function (response) {
-        console.log("Form submitted successfully", response);
+        console.log("Form submitted successfully to Google Sheet", response);
+
+        // Now ALSO send to HubSpot
+        const portalId = "146250154";
+        const formId = "1232c850-be75-48a6-ae66-88eb6b75483c";
+
+        const hsData = {
+          fields: [
+            { name: "firstname", value: fullName },
+            { name: "email", value: email },
+            { name: "phone", value: whatsappNumber },
+            { name: "company", value: businessName },
+            { name: "annualrevenue", value: annualRevenue },
+            {
+              name: "connect_time__c",
+              value: connectTime,
+            },
+            {
+              name: "landing_page_url",
+              value: url || window.location.href,
+            },
+            {
+              name: "lp_name",
+              value: "AIcelerate",
+            },
+            {
+              name: "submission_time",
+              value: formatted,
+            },
+          ],
+          context: {
+            hutk: getCookie("hubspotutk"),
+            pageUri: window.location.href,
+            pageName: document.title,
+          },
+        };
+
+        $.ajax({
+          url: `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`,
+          type: "POST",
+          contentType: "application/json",
+          data: JSON.stringify(hsData),
+          success: function (hsResponse) {
+            console.log("Also submitted to HubSpot", hsResponse);
+          },
+          error: function (xhr, status, error) {
+            console.error("HubSpot Submission Error:", error);
+          },
+        });
       },
       error: function (xhr, status, error) {
-        console.error("AJAX Error:", error);
+        console.error("Google Sheets AJAX Error:", error);
       },
     });
   });
