@@ -397,7 +397,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
  <!-- How we are different -->
  <div class="hwwe container py-5">
     <div class="text-center mb-5">
-        <h2 style="
+        <h2 class="hwdesc1" style="
             font-family: 'Overpass', sans-serif;
             font-weight: 900;
             font-size: 2.5rem;
@@ -407,7 +407,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
         ">
             How We Are Different and Better
         </h2>
-        <h2 style="
+        <h2 class="hwdesc2" style="
             font-family: 'Poppins', sans-serif;
             font-size: 25px;
             font-weight: 900;
@@ -417,7 +417,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
         ">
             Alcelerate isn't just another tool - it's your growth engine
         </h2>   
-        <h2 style="
+        <h2 class="hwdesc3" style="
             font-family: 'Poppins', sans-serif;
             font-size: 20px;
             color: #5b5b5b;
@@ -550,6 +550,19 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     
     /* Background for Mobile */
 @media (max-width: 768px) {
+    .hwdesc1{
+        font-size: 1.9rem !important;
+
+    }
+    .hwdesc2{
+        font-size: 16px !important;
+
+    }
+    .hwdesc3{
+        font-size: 17px !important;
+
+    }
+
     .hwwe{
         padding-left: 2.5rem;
         padding-right: 2.5rem;
@@ -657,8 +670,12 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
         .mobileVersion{
             display: block;
         }
-        .rmv, .idealcont{
+        .rmv{
             margin-top: -3rem !important;
+        }
+
+        .idealcont{
+            margin-top: -6rem !important;
         }
     }
 </style>
@@ -816,7 +833,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 </div>
 
 <div class="container my-5 mobileVersion ">
-<h2 style="
+<h2 class="hwdesc1" style="
             font-family: 'Overpass', sans-serif;
             font-weight: 900;
             font-size: 2rem;
@@ -972,7 +989,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             
             <!-- Image Section -->
             <div class="col-lg-6 "style="text-align:center">
-                <h2 style="
+                <h2 class="grtxt" style="
             font-family: 'Overpass', sans-serif;
             font-weight: 900;
             font-size: 3rem;
@@ -981,8 +998,12 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             letter-spacing: 0.5px;
         ">
             Our Guarantee
-        </h2>
-                <img class="fifty img-fluid rounded" style="object-fit: cover; min-width: 80%;">
+        </h2><!-- Replace this -->
+<!-- <img class="fifty img-fluid rounded" style="object-fit: cover; min-width: 80%;"> -->
+
+<!-- With this -->
+<div class="fifty rounded mx-auto" style="min-width: 80%;"></div>
+
             </div>
 
             <!-- Text Section -->
@@ -999,7 +1020,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
                 <br>
                 <div class="row gy-2 gx-4 mb-4">
                     <div class="col-12">
-                        <p class="mb-0" style="
+                        <p class="tickline mb-0" style="
                             font-family: 'Poppins', sans-serif;
                             font-size: 14px;
                             color: #000000;
@@ -1009,7 +1030,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
                         </p>
                     </div>
                     <div class="col-12">
-                        <p class="mb-0" style="
+                        <p class="tickline mb-0" style="
                             font-family: 'Poppins', sans-serif;
                             font-size: 14px;
                             color: #000000;
@@ -1019,7 +1040,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
                         </p>
                     </div>
                     <div class="col-12">
-                        <p class="mb-0" style="
+                        <p class="tickline mb-0" style="
                             font-family: 'Poppins', sans-serif;
                             font-size: 14px;
                             color: #000000;
@@ -1029,7 +1050,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
                         </p>
                     </div>
                     <div class="col-12">
-                        <p class="mb-0" style="
+                        <p class="tickline mb-0" style="
                             font-family: 'Poppins', sans-serif;
                             font-size: 14px;
                             color: #000000;
@@ -1039,7 +1060,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
                         </p>
                     </div>
                     <div class="col-12">
-                        <p class="mb-0" style="
+                        <p class="tickline mb-0" style="
                             font-family: 'Poppins', sans-serif;
                             font-size: 14px;
                             color: #000000;
@@ -1066,30 +1087,60 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     margin-right: 8px;
     vertical-align: middle;
 }
-.fifty{
-    background: url('img/fifty.svg') no-repeat top center; /* Align to top */
+/* .fifty{
+    background: url('img/fifty.svg') no-repeat top center; /* Align to top 
         
    
     height: auto; 
-    min-height: 23vh !important;    
+    min-height: 23vh !important; }  */
+    
+    .fifty {
+  background: url('img/fifty.svg') no-repeat top center;
+  background-size: contain;
+  border-radius: 1rem;
+  min-height: 23vh !important;
+  width: 100%;
+}
+
         
     
     
-}
+
 @media (max-width: 768px) {
+    .grtxt{
+        font-size: 2.3rem !important;
+    }
     .fifty{
     background: url('img/Asset 168.webp') no-repeat top center; /* Align to top */
         background-size: 100% auto;
         height: auto;        
-        width: 100vw;
-        min-height: calc(20vh) !important; /* Ensure space at bottom */
-    
+        width: 100%;
+        min-height: 20vh !important; /* Ensure space at bottom */
     
 }
+.tickline{
+
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #000;
+  
+}
+
+.tick-line span {
+  flex: 1;
+}
+
+
 .wedel{
     text-align: center !important;
+    margin-top: -2rem !important;
+    font-size: 23px !important;
 }
 }
+
 
 
 </style>
@@ -1272,9 +1323,9 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 
 
 
+<!-- reviews section -->
 
-
-<div class="container my-5 laptopVersion" style="background-image: url('img/Asset85.jpg'); background-size: cover; background-position: center; min-height: 800px;">
+<div class="container laptopVersion" style="background-image: url('img/Asset85.jpg'); background-size: cover; background-position: center; min-height: 800px;">
   <!-- Heading -->
   <div class="text-center mb-5 py-5">
     <h2 style="
@@ -1345,31 +1396,56 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 
   </div>
 </div>
+<style>
+    /* Hide laptop version on small screens */
+@media (max-width: 767.98px) {
+  .laptopVersion {
+    display: none !important;
+  }
+}
+
+/* Hide mobile version on larger screens */
+@media (min-width: 768px) {
+  .rmv {
+    display: none !important;
+  }
+}
+
+</style>
+
+<!-- review end -->
 
 
+<!-- succesws story -->
 <div class="container my-5">
   <div class="row align-items-center p-4">
+
+    <!-- Heading: Always first -->
+    <div class="textc col-12">
+      <h2 style="
+          font-family: 'Overpass', sans-serif;
+          font-weight: 900;
+          font-size: 2.5rem;
+          color: #696cc7;   
+          margin-bottom: 0px;
+          letter-spacing: 0.5px;
+      ">
+        Success Story
+      </h2>
+    </div>
+
     <!-- Image and Name -->
-    <div class="col-md-3 text-center">
-      <img src="img/Asset 89.jpg" alt="Anastasia Human" class="rounded-circle img-fluid" style="width: 150px; height: 150px; object-fit: cover;">
+    <div class="col-md-3 text-center order-2 order-md-1 mt-4 mt-md-0">
+      <img src="img/Asset 89.jpg" alt="Anastasia Human" class="rounded-circle img-fluid"
+           style="width: 150px; height: 150px; object-fit: cover;">
       <p class="mt-3 mb-0 fw-bold">Anastasia Human</p>
       <p class="text-muted">CEO, DELIVERED.</p>
     </div>
 
     <!-- Text Content -->
-    <div class="col-md-9">
-        <h2 style="
-            font-family: 'Overpass', sans-serif;
-            font-weight: 900;
-            font-size: 2.5rem;
-            color: #696cc7;   
-            margin-bottom: 0px;
-            letter-spacing: 0.5px;
-        ">
-            Success Story
-        </h2>
+    <div class="col-md-9 order-3 order-md-2">
       <p>
-        The CEO of DELIVERED, Anastasia Human, used the Alcelerate to conduct targeted outreach.
+        The CEO of DELIVERED, Anastasia Human, used Alcelerate to conduct targeted outreach.
         She sent approximately 80 cold emails to potential partners and clients via the platform.
       </p>
       <p>As a result, the company secured below meeting:</p>
@@ -1379,33 +1455,50 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
         <li>A meeting with the CEO of a UAE-based experiential agency (Mosaic Live).</li>
       </ul>
       <p>
-        As a result of using Alcelerate, DELIVERED, initiated dialogues with key decision-makers in their target verticals:  
-        media art, immersive shows, and branded experiences. They evaluated the outcome from the service at $50k deal.
+        As a result of using Alcelerate, DELIVERED initiated dialogues with key decision-makers in their target verticals:  
+        media art, immersive shows, and branded experiences. They evaluated the outcome from the service at a $50k deal.
       </p>
       <p class="fst-italic text-muted text-end mt-3">More case studies available on request.</p>
     </div>
+
   </div>
 </div>
 
+
+
+
+
+<!-- who we are section -->
 <div class="whowecont container my-5">
   <div class="row align-items-center">
-    <!-- Left Column: Text Content -->
-    <div class="col-md-8">
-        <h2 style="
-            font-family: 'Overpass', sans-serif;
-            font-weight: 900;
-            font-size: 2.5rem;
-            color: #696cc7;   
-            margin-bottom: 0px;
-            letter-spacing: 0.5px;
-        ">
-            Who We Are
-        </h2>
-      
+    <!-- Heading: Always first -->
+    <div class="textc col-12">
+      <h2 class="whowesec" style="
+          font-family: 'Overpass', sans-serif;
+          font-weight: 900;
+          font-size: 2.5rem;
+          color: #696cc7;
+          margin-bottom: 0px;
+          letter-spacing: 0.5px;
+      ">
+        Who We Are
+      </h2>
+    </div>
+
+    <!-- Image Column -->
+    <div class="col-md-4 text-center order-2 order-md-2 mt-4 mt-md-0">
+      <img src="img/Asset91.jpg" alt="Anastasia Denisova"
+           class="rounded-circle img-fluid mb-3"
+           style="width: 180px; height: 180px; object-fit: cover;">
+      <p class="fw-bold mb-0">Anastasia Denisova</p>
+      <p class="text-muted">Co-Founder, Alcelerate<br>Forbes 30 Under 30</p>
+    </div>
+
+    <!-- Text Column (Description + CTA) -->
+    <div class="txtcol col-md-8 order-3 order-md-1">
       <p>
         Alcelerate is the AI sales engine built for B2B founders and growth teams who need pipeline, not promises.
         We turn outbound chaos into booked meetings—fast. <br>
-      
         Our platform automates your entire GTM motion: identifying qualified leads from a 1B+ contact database,
         sending hyper-personalized outreach, and booking sales meetings—all from a single, unified dashboard.
         <br>
@@ -1413,36 +1506,37 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
         No more hours lost on LinkedIn or manual cold outreach. Just strategy, leads, and booked calls—all in one place.
       </p>
       <a href="#" class="hwbtn btn btn-primary py-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#detailsModal" style="
-                    font-size: 18px;                   
-                    background-color: #696cc7;
-                    color: #ffffff;
-                    border-radius: 30px;
-                    box-shadow: 0 4px 8px rgba(59, 101, 255, 0.382);
-                    transition: all 0.4s ease;
-                    border-color: #696cc7;
-                    font-family: 'Poppins', sans-serif;
-                "                
-                onmouseover="this.style.backgroundColor='#484cbd';"
-                onmouseout="this.style.backgroundColor='#696cc7';">
-                    Grow Your Business      </a>
-    </div>
-
-    <!-- Right Column: Image and Name -->
-    <div class="col-md-4 text-center mt-4 mt-md-0">
-      <img src="img/Asset91.jpg" alt="Anastasia Denisova"
-           class="rounded-circle img-fluid mb-3"
-           style="width: 180px; height: 180px; object-fit: cover;">
-      <p class="fw-bold mb-0">Anastasia Denisova</p>
-      <p class="text-muted">Co-Founder, Alcelerate<br>Forbes 30 Under 30</p>
+          font-size: 18px;
+          background-color: #696cc7;
+          color: #ffffff;
+          border-radius: 30px;
+          box-shadow: 0 4px 8px rgba(59, 101, 255, 0.382);
+          transition: all 0.4s ease;
+          border-color: #696cc7;
+          font-family: 'Poppins', sans-serif;"
+          onmouseover="this.style.backgroundColor='#484cbd';"
+          onmouseout="this.style.backgroundColor='#696cc7';">
+        Grow Your Business
+      </a>
     </div>
   </div>
 </div>
 
+
 <style>
     @media (max-width: 768px) {
+        .whowesec{
+            margin-top: -1rem;
+        }
         .whowecont{
             padding-left: 2rem ;
             padding-right: 2rem ;
+        }
+        .textc{
+            text-align: center;
+        }
+        .txtcol{
+            justify-items: center;
         }
     }
 </style>
@@ -1451,15 +1545,11 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 
 
 <!-- popup Modal -->
-<div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content card-style shadow-lg border-0 overflow-hidden">
             <div class="d-flex">
-                <!-- Left Side - Image Section -->
-                <!-- <div class="modal-image d-none d-md-block">
-                    <img src="img/popup.jpg" alt="School" class="img-fluid h-100">
-                </div> -->
-                <!-- Right Side - Form Section -->
+               
                 <div class="modal-body flex-grow-1">
                     <div class="modal-header text-white rounded-top-4" style="background: linear-gradient(135deg, #3e40bf, #696cc7);">
                         <h5 class="modal-title text-white fw-bold" id="detailsModalLabel" style="font-family: 'Chunk Five', serif; font-size: 25px;">Please Submit Your Details</h5>
@@ -1516,7 +1606,103 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             </div>
         </div>
     </div>
+</div> -->
+
+
+<div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content card-style shadow-lg border-0 overflow-hidden">
+      <div class="modal-body flex-grow-1">
+        <div class="modal-header text-white rounded-top-4" style="background: linear-gradient(135deg, #3e40bf, #696cc7);">
+          <h5 class="modal-title text-white fw-bold" id="detailsModalLabel" style="font-family: 'Chunk Five', serif; font-size: 25px;">
+            Please Submit Your Details
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <form>
+          <div class="p-3">
+
+            <!-- Full Name -->
+            <div class="mb-3">
+              <label for="fullName" class="form-label" style="font-family: 'League Spartan', sans-serif; font-size: 18px;">Full Name</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
+                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name">
+              </div>
+            </div>
+
+            <!-- WhatsApp Number + Country Code -->
+            <div class="mb-3">
+              <label for="whatsappNumber" class="form-label" style="font-family: 'League Spartan', sans-serif; font-size: 18px;">WhatsApp Number</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light"><i class="bi bi-whatsapp"></i></span>
+                <select class="form-select" style="max-width: 100px;">
+                  <option value="+1">+1</option>
+                  <option value="+44">+44</option>
+                  <option value="+91" selected>+91</option>
+                  <option value="+61">+61</option>
+                  <option value="+971">+971</option>
+                  <!-- Add more as needed -->
+                </select>
+                <input type="tel" class="form-control" id="whatsappNumber" placeholder="Enter WhatsApp number">
+              </div>
+            </div>
+
+            <!-- Email ID -->
+            <div class="mb-3">
+              <label for="email" class="form-label" style="font-family: 'League Spartan', sans-serif; font-size: 18px;">Email ID</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light"><i class="bi bi-envelope"></i></span>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+              </div>
+            </div>
+
+            <!-- Business Name / Website -->
+            <div class="mb-3">
+              <label for="businessName" class="form-label" style="font-family: 'League Spartan', sans-serif; font-size: 18px;">Business Name / Website</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light"><i class="bi bi-briefcase"></i></span>
+                <input type="text" class="form-control" id="businessName" placeholder="Enter business name or website">
+              </div>
+            </div>
+
+            <!-- Annual Revenue -->
+            <div class="mb-3">
+              <label for="annualRevenue" class="form-label" style="font-family: 'League Spartan', sans-serif; font-size: 18px;">Annual Revenue</label>
+              <select class="form-select" id="annualRevenue">
+                <option value="">Select your annual revenue</option>
+                <option>Less than $500,000</option>
+                <option>$500,000 - 1,000,000</option>
+                <option>$1,000,000 - 5,000,000</option>
+                <option>$5,000,000 - 10,000,000</option>
+                <option>Above $10,000,000</option>
+              </select>
+            </div>
+
+            <!-- Convenient Time -->
+            <div class="mb-3">
+              <label for="connectTime" class="form-label" style="font-family: 'League Spartan', sans-serif; font-size: 18px;">Convenient Time to Connect</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light"><i class="bi bi-clock"></i></span>
+                <input type="text" class="form-control" id="connectTime" placeholder="e.g., 4:00 PM - 5:00 PM">
+              </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-between mt-4">
+              <button type="button" class="btn btn-outline-secondary px-4 py-2" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary px-4 py-2" id="submitForm" style="background-color: #5f5fb3;">Submit</button>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
 </div>
+
     
 
 
@@ -1705,7 +1891,6 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     }
 
     .modal-body {
-        width: 55%;
         background: #ffffff;
     }
 </style>
