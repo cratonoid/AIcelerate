@@ -903,7 +903,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 <!-- Guarantee End -->
 
 <!-- Ideal For -->
- <div class="container py-5">
+ <div class="idealcont container py-5">
     <div class="text-center mb-5">          
         <h2 style="
             font-family: 'Overpass', sans-serif;
@@ -935,18 +935,19 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
         </h2>     
     </div>
 
-    <div class="row g-4">
+    <div class="idealcards row g-4">
         <!-- Card 1 -->
         <div class="col-md-6 col-lg-4">
-            <div class="card border-0 shadow-sm"   
+            <div class="card border-0 shadow-sm "   
             style="
                     background-color: #ffffff;
                     border-radius: 16px;
                     transition: transform 0.3s ease;
+                    max-width: 100%;
                 "         
                 onmouseover="this.style.transform='translateY(-5px)';"
                 onmouseout="this.style.transform='translateY(0)';">
-                <img src="img/I1.svg" alt="">              
+                <img src="img/I1.svg" alt="" >              
             </div>
         </div>
 
@@ -1047,7 +1048,46 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 
 </div>
 
+<style>
+    .idealcards{
+        width: 70%;
+    }
+    .idealcont{
+        justify-items: center;
+    }
+
+     @media (max-width: 768px) {
+        .idealcards .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .idealcards .card {
+            padding: 0.75rem;
+            border-radius: 12px;
+        }
+
+        .idealcards img {
+            max-width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .hwbtn {
+            font-size: 16px !important;
+            padding: 10px 20px !important;
+        }
+    }
+</style>
+
+
 <!-- Ideal for Section End -->
+
+
+
+
+
 <div class="container my-5" style="background-image: url('img/Asset85.jpg'); background-size: cover; background-position: center; min-height: 800px;">
   <!-- Heading -->
   <div class="text-center mb-5 py-5">
