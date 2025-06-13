@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 209.74 64.93">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        fill: #5f60b3;
+      }
+
+      .cls-5 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-7 {
+        fill: #2f333f;
+        font-family: Montserrat-Regular, Montserrat;
+        font-size: 14.6px;
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-8 {
+        fill: url(#linear-gradient);
+        opacity: .7;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="104.87" y1="4.07" x2="104.87" y2="64.94" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#d7eff9"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <rect class="cls-8" width="209.74" height="64.93" rx="6.85" ry="6.85"/>
+      <text class="cls-7" transform="translate(86.4 37.25)"><tspan class="cls-6" x="0" y="0">E</tspan><tspan class="cls-1" x="9.48" y="0">-</tspan><tspan class="cls-3" x="15.19" y="0">c</tspan><tspan x="23.3" y="0">omme</tspan><tspan class="cls-5" x="72.27" y="0">r</tspan><tspan class="cls-2" x="77.97" y="0">c</tspan><tspan x="86.09" y="0">e</tspan></text>
+      <path class="cls-4" d="M47.92,48.59c-.79,0-1.48-.24-2.09-.72-.61-.48-1.03-1.1-1.27-1.85l-4.45-16.14c-.15-.55-.05-1.06.28-1.53.33-.47.79-.7,1.37-.7h8.29l7.68-11.43c.15-.23.35-.42.61-.57.26-.15.54-.22.83-.22s.57.07.83.22c.26.14.47.33.61.57l7.68,11.43h8.38c.58,0,1.04.23,1.37.7.33.46.43.97.28,1.53l-4.45,16.14c-.23.76-.66,1.37-1.27,1.85-.61.48-1.31.72-2.09.72h-22.6ZM47.88,45.1h22.68l3.84-13.96h-30.36l3.84,13.96ZM59.22,41.61c.96,0,1.78-.34,2.47-1.02.68-.68,1.02-1.51,1.02-2.46s-.34-1.78-1.02-2.46c-.68-.68-1.51-1.02-2.47-1.02s-1.78.34-2.46,1.02c-.68.68-1.03,1.51-1.03,2.46s.34,1.78,1.03,2.46c.68.68,1.51,1.02,2.46,1.02M54.29,27.66h9.81l-4.93-7.33-4.89,7.33Z"/>
+    </g>
+  </g>
+</svg>
