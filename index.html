@@ -14,6 +14,21 @@
     <!-- Favicon -->
     <link href="img/logo.webp" rel="icon">
 
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Select (compatible with Bootstrap 5) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css" rel="stylesheet">
+
+    <!-- jQuery FIRST -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap 5.3.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Select (for Bootstrap 5) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@800&display=swap" rel="stylesheet">
@@ -44,6 +59,10 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.min.css"/>
+
+
+
 
 
     <!-- Meta Pixel Code -->
@@ -1739,16 +1758,14 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             </div>
 
             <!-- WhatsApp Number + Country Code -->
-            <div class="mb-3">
-              <label for="whatsappNumber" class="form-label" style="font-family: 'League Spartan', sans-serif; font-size: 18px;">WhatsApp Number</label>
-              <div class="input-group">
+            <div class="mb-3" style="width: 100%;">
+            <label for="whatsappNumber" class="form-label">WhatsApp Number</label>
+            <div class="input-group" style="width: 100%;">
                 <span class="input-group-text bg-light"><i class="bi bi-whatsapp"></i></span>
-                <select class="form-select selectpicker" data-live-search="true" id="countryCode" style="max-width: 100px;">
-                    <option selected disabled>Select Code</option>
-                </select>
-                <input type="tel" class="form-control" id="whatsappNumber" placeholder="Enter WhatsApp number">
-              </div>
+                <input type="tel" id="whatsappNumber" class="form-control" style="width: 40.3rem;" placeholder="Enter WhatsApp number">
             </div>
+            </div>  
+
 
             <!-- Email ID -->
             <div class="mb-3">
@@ -2005,7 +2022,6 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@5.10.0/dist/js/coreui.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
@@ -2014,6 +2030,8 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script async defer src="https://connect.facebook.net/en_US/fbevents.js"></script>
+
     
     
 
@@ -2025,31 +2043,40 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 <!-- Scripts at the end of body -->
 
 <script>
-
-  fetch('https://restcountries.com/v3.1/all')
-  .then(res => res.json())
-  .then(data => {
-    const countrySelect = document.getElementById('countryCode');
-    const countries = data
-      .filter(country => country.idd && country.idd.root) // Ensure calling code exists
-      .map(country => {
-        const code = country.idd.root + (country.idd.suffixes ? country.idd.suffixes[0] : '');
-        const name = country.name.common;
-        const flag = country.flags.svg;
-        return { name, code, flag };
-      })
-      .sort((a, b) => a.name.localeCompare(b.name));
-
-    countries.forEach(({ name, code, flag }) => {
-      const option = document.createElement('option');
-      option.value = code;
-      option.innerHTML = `${name} (${code})`;
-      countrySelect.appendChild(option);
+  document.addEventListener("DOMContentLoaded", function () {
+    const input = document.querySelector("#whatsappNumber");
+    window.intlTelInput(input, {
+      initialCountry: "auto",
+      geoIpLookup: callback => {
+        fetch("https://ipapi.co/json")
+          .then(res => res.json())
+          .then(data => callback(data.country_code))
+          .catch(() => callback("us"));
+      },
+      utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"
     });
+  });
 
-    $('.selectpicker').selectpicker('refresh'); // Re-initialize after appending
-  })
-  .catch(err => console.error('Error loading countries:', err));
+
+ /* const input = document.querySelector("#whatsappNumber");
+  const iti = window.intlTelInput(input, {
+    initialCountry: "in", // optional
+    separateDialCode: true, // shows dial code separately
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+  });
+
+  // Example: get country code and full number on form submit
+  function getPhoneDetails() {
+    const dialCode = iti.getSelectedCountryData().dialCode;
+    const countryCode = "+" + dialCode;
+    const fullNumber = iti.getNumber(); // includes country code
+    const nationalNumber = iti.getNumber(intlTelInputUtils.numberFormat.NATIONAL); // without country code
+
+    console.log("Country Code:", countryCode);     // e.g., +91
+    console.log("Full Number:", fullNumber);       // e.g., +919876543210
+    console.log("National Number:", nationalNumber); // e.g., 9876543210
+  } */
+
     
 //     document.addEventListener("DOMContentLoaded", function () {
 //     let select1 = document.getElementById("connectTime");
@@ -2087,6 +2114,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 </script>
 </body>
 
-</body>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+
 
 </html>
