@@ -76,7 +76,12 @@
       '<i class="bi bi-chevron-right"></i>',
     ],
   });
-
+  const input = document.querySelector("#whatsappNumber");
+  const iti = window.intlTelInput(input, {
+    initialCountry: "ae",
+    separateDialCode: true, // shows dial code separately
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+  });
   // Testimonials carousel
   $(".testimonial-carousel").owlCarousel({
     autoplay: true,
@@ -106,15 +111,25 @@
 
     // Get input values
     let fullName = $("#fullName").val().trim();
-    let whatsappNumber = $("#whatsappNumber").val().trim();
+    
     let email = $("#email").val().trim();
-    let city = $("#city").val().trim();
+    let businessName = $("#businessName").val();
     let connectTime = $("#connectTime").val();
+    let annualRevenue = $("#annualRevenue").val();
     let url = sessionStorage.getItem("url");
+
+  // Example: get country code and full number on form submit
+  function getPhoneDetails() {
+    const dialCode = iti.getSelectedCountryData().dialCode;
+    const countryCode = "+" + dialCode;
+    const fullNumber = iti.getNumber(); // includes country code
+    const nationalNumber = iti.getNumber(intlTelInputUtils.numberFormat.NATIONAL); // without country code
+    return fullNumber
+  } 
+  let whatsappNumber = getPhoneDetails();
 
     // Validation Regex
     let nameRegex = /^[a-zA-Z\s]+$/;
-    let phoneRegex = /^[6-9]\d{9}$/;
     let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     // Validation Checks
@@ -126,10 +141,10 @@
       );
       return;
     }
-    if (whatsappNumber === "" || !phoneRegex.test(whatsappNumber)) {
+    if (whatsappNumber === "") {
       swal(
         "Invalid Number",
-        "Please enter a valid 10-digit WhatsApp number.",
+        "",
         "error"
       );
       return;
@@ -138,10 +153,18 @@
       swal("Invalid Email", "Please enter a valid email address.", "error");
       return;
     }
-    if (city === "" || !nameRegex.test(city)) {
+    if (businessName === "") {
       swal(
-        "Invalid City",
-        "Please enter a valid city name (letters only).",
+        "Invalid Business Name",
+        "Please enter a valid Business Name.",
+        "error"
+      );
+      return;
+    }
+    if (annualRevenue === "") {
+      swal(
+        "Invalid Annual Revenue",
+        "Please enter a valid Annual Revenue.",
         "error"
       );
       return;
@@ -155,19 +178,20 @@
       return;
     }
 
-    // Hide Modal on successful validation
-    $("#detailsModal").modal("hide");
-
     let formData = {
       "Full Name": fullName,
       "WhatsApp Number": whatsappNumber,
       "Email ID": email,
-      "City of Residence": city,
+      "Business Name": businessName,
+      "Annual Revenue": annualRevenue,
       "Convenient Time to Connect": connectTime,
       Url: url,
-      "Lp name": "Singhania_Law_1",
+      "Lp name": "AIcelerate",
     };
 
+    console.log(formData);
+      $("#detailsModal").css("display", "none");
+      $(".modal-backdrop").remove();
     $.ajax({
       url: scriptURL,
       type: "POST",
@@ -182,165 +206,5 @@
     });
   });
 
-  $("#submitApplication").click(function (event) {
-    event.preventDefault();
 
-    // Get input values
-    let fullName = $("#name").val().trim();
-    let whatsappNumber = $("#whatsapp").val().trim();
-    let email = $("#mainFormEmail").val().trim();
-    let city = $("#mainFormCity").val().trim();
-    let connectTime = $("#mainFormTime").val();
-    let url = sessionStorage.getItem("url");
-
-    // Validation Regex
-    let nameRegex = /^[a-zA-Z\s]+$/;
-    let phoneRegex = /^[6-9]\d{9}$/;
-    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-    // Validation Checks
-    if (fullName === "" || !nameRegex.test(fullName)) {
-      swal(
-        "Invalid Name",
-        "Please enter a valid full name (letters only).",
-        "error"
-      );
-      return;
-    }
-    if (whatsappNumber === "" || !phoneRegex.test(whatsappNumber)) {
-      swal(
-        "Invalid Number",
-        "Please enter a valid 10-digit WhatsApp number.",
-        "error"
-      );
-      return;
-    }
-    if (email === "" || !emailRegex.test(email)) {
-      swal("Invalid Email", "Please enter a valid email address.", "error");
-      return;
-    }
-    if (city === "" || !nameRegex.test(city)) {
-      swal(
-        "Invalid City",
-        "Please enter a valid city name (letters only).",
-        "error"
-      );
-      return;
-    }
-    if (connectTime === "") {
-      swal(
-        "Invalid Time",
-        "Please select a convenient time to connect.",
-        "error"
-      );
-      return;
-    }
-
-    // Hide Modal on successful validation
-    $("#detailsModal").modal("hide");
-
-    let formData = {
-      "Full Name": fullName,
-      "WhatsApp Number": whatsappNumber,
-      "Email ID": email,
-      "City of Residence": city,
-      "Convenient Time to Connect": connectTime,
-      Url: url,
-      "Lp name": "Singhania_Law_1",
-    };
-
-    $.ajax({
-      url: scriptURL,
-      type: "POST",
-      data: formData,
-      contentType: "application/x-www-form-urlencoded",
-      success: function (response) {
-        console.log("Form submitted successfully", response);
-      },
-      error: function (xhr, status, error) {
-        console.error("AJAX Error:", error);
-      },
-    });
-  });
-
-  $("#SecondFormSubmitApplication").click(function (event) {
-    event.preventDefault();
-
-    // Get input values
-    let fullName = $("#secondFormName").val().trim();
-    let whatsappNumber = $("#secondFormWhatsapp").val().trim();
-    let email = $("#secondFormEmail").val().trim();
-    let city = $("#secondFormCity").val().trim();
-    let connectTime = $("#secondFormTime").val();
-    let url = sessionStorage.getItem("url");
-
-    // Validation Regex
-    let nameRegex = /^[a-zA-Z\s]+$/;
-    let phoneRegex = /^[6-9]\d{9}$/;
-    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-    // Validation Checks
-    if (fullName === "" || !nameRegex.test(fullName)) {
-      swal(
-        "Invalid Name",
-        "Please enter a valid full name (letters only).",
-        "error"
-      );
-      return;
-    }
-    if (whatsappNumber === "" || !phoneRegex.test(whatsappNumber)) {
-      swal(
-        "Invalid Number",
-        "Please enter a valid 10-digit WhatsApp number.",
-        "error"
-      );
-      return;
-    }
-    if (email === "" || !emailRegex.test(email)) {
-      swal("Invalid Email", "Please enter a valid email address.", "error");
-      return;
-    }
-    if (city === "" || !nameRegex.test(city)) {
-      swal(
-        "Invalid City",
-        "Please enter a valid city name (letters only).",
-        "error"
-      );
-      return;
-    }
-    if (connectTime === "") {
-      swal(
-        "Invalid Time",
-        "Please select a convenient time to connect.",
-        "error"
-      );
-      return;
-    }
-
-    // Hide Modal on successful validation
-    $("#detailsModal").modal("hide");
-
-    let formData = {
-      "Full Name": fullName,
-      "WhatsApp Number": whatsappNumber,
-      "Email ID": email,
-      "City of Residence": city,
-      "Convenient Time to Connect": connectTime,
-      Url: url,
-      "Lp name": "Singhania_Law_1",
-    };
-
-    $.ajax({
-      url: scriptURL,
-      type: "POST",
-      data: formData,
-      contentType: "application/x-www-form-urlencoded",
-      success: function (response) {
-        console.log("Form submitted successfully", response);
-      },
-      error: function (xhr, status, error) {
-        console.error("AJAX Error:", error);
-      },
-    });
-  });
 })(jQuery);
