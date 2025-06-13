@@ -116,7 +116,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 }
 
 .heroSection1 {
-    background: url('img/banner1.webp') no-repeat center center;
+    background: url('img/banner1.jpg') no-repeat center center;
     background-size: 100% auto; /* Full width, auto height */
     width: 100vw; /* Full viewport width */
     height: auto; 
@@ -127,26 +127,29 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 /* Background for Mobile */
 @media (max-width: 768px) {
     .heroSection {
-        background: url('img/banner_mob.png') no-repeat top center; /* Align to top */
+        background: url('img/banner_mob.jpg') no-repeat top center; /* Align to top */
         background-size: 100% auto;
-        height: auto; 
-        aspect-ratio: 9 / 16;
+        height: auto;        
         width: 100vw;
-        min-height: calc(100vh - 200px) !important; /* Ensure space at bottom */
+        min-height: calc(70vh - 35px) !important; /* Ensure space at bottom */
     }
     .heroSection1 {
-        background: url('img/banner_mob.png') no-repeat top center; /* Align to top */
+        background: url('img/Asset 112.webp') no-repeat top center; /* Align to top */
         background-size: 100% auto;
-        height: auto; 
-        aspect-ratio: 9 / 16;
+        height: auto;        
         width: 100vw;
-        min-height: calc(100vh - 200px) !important; /* Ensure space at bottom */
+        min-height: calc(80vh - 200px) !important; /* Ensure space at bottom */
     }
     .apply-btn {
-        transform: translateX(-10%) translateY(-120px);
+        position: relative !important;
+        transform: translateX(20%) translateY(39rem);
     }
     .mb-5 {
         margin-bottom: 0rem !important;
+    }
+    .overlay{
+        height: 80%;
+        background: rgba(0, 0, 0, 0.061);
     }
 }
 
@@ -157,7 +160,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0);
     z-index: 1;
 }
 
@@ -364,7 +367,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 
 
  <!-- How we are different -->
- <div class="container py-5">
+ <div class="hwwe container py-5">
     <div class="text-center mb-5">
         <h2 style="
             font-family: 'Overpass', sans-serif;
@@ -516,6 +519,14 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
         text-align: center;
         flex-direction: row !important;
     }
+    
+    /* Background for Mobile */
+@media (max-width: 768px) {
+    .hwwe{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
 </style>
 <!--  How we are Section End -->
 
@@ -778,12 +789,12 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
         ">
             Our Guarantee
         </h2>
-                <img src="img/fifty.webp" alt="fifty_img" class="img-fluid rounded" style="object-fit: cover; min-width: 80%;">
+                <img class="fifty img-fluid rounded" style="object-fit: cover; min-width: 80%;">
             </div>
 
             <!-- Text Section -->
             <div class="col-lg-6">
-                <h4 class="bg-white text-start pe-3" 
+                <h4 class="wedel bg-white text-start pe-3" 
                     style="
                         font-family: 'Poppins', sans-serif;
                         font-size: 20px;
@@ -862,6 +873,31 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     margin-right: 8px;
     vertical-align: middle;
 }
+.fifty{
+    background: url('img/fifty.svg') no-repeat top center; /* Align to top */
+        
+   
+    height: auto; 
+    min-height: 23vh !important;    
+        
+    
+    
+}
+@media (max-width: 768px) {
+    .fifty{
+    background: url('img/Asset 168.webp') no-repeat top center; /* Align to top */
+        background-size: 100% auto;
+        height: auto;        
+        width: 100vw;
+        min-height: calc(20vh) !important; /* Ensure space at bottom */
+    
+    
+}
+.wedel{
+    text-align: center !important;
+}
+}
+
 
 </style>
 <!-- Guarantee End -->
@@ -910,7 +946,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
                 "         
                 onmouseover="this.style.transform='translateY(-5px)';"
                 onmouseout="this.style.transform='translateY(0)';">
-                <img src="img/I1.webp" alt="">              
+                <img src="img/I1.svg" alt="">              
             </div>
         </div>
 
@@ -924,7 +960,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
                 "         
                 onmouseover="this.style.transform='translateY(-5px)';"
                 onmouseout="this.style.transform='translateY(0)';">
-                <img src="img/I2.webp" alt="">              
+                <img src="img/I2.svg" alt="">              
             </div>
         </div>
 
@@ -980,7 +1016,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
                 "         
                 onmouseover="this.style.transform='translateY(-5px)';"
                 onmouseout="this.style.transform='translateY(0)';">
-                <img src="img/I6.webp" alt="">              
+                <img src="img/I6.svg" alt="">              
             </div>
         </div>
 
@@ -1088,7 +1124,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
   </div>
 </div>
 
-<div class="container my-5">
+<div class="whowecont container my-5">
   <div class="row align-items-center">
     <!-- Left Column: Text Content -->
     <div class="col-md-8">
@@ -1139,7 +1175,14 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
   </div>
 </div>
 
-
+<style>
+    @media (max-width: 768px) {
+        .whowecont{
+            padding-left: 2rem ;
+            padding-right: 2rem ;
+        }
+    }
+</style>
 
 
 

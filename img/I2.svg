@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 209.74 64.93">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5f60b3;
+      }
+
+      .cls-2 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-4 {
+        fill: #2f333f;
+        font-family: Montserrat-Regular, Montserrat;
+        font-size: 14.6px;
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-7 {
+        fill: url(#linear-gradient);
+        opacity: .7;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="104.87" y1="4.07" x2="104.87" y2="64.94" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#d7eff9"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <rect class="cls-7" width="209.74" height="64.93" rx="6.85" ry="6.85"/>
+      <text class="cls-4" transform="translate(82.41 37.25)"><tspan x="0" y="0">R</tspan><tspan class="cls-2" x="10.56" y="0">e</tspan><tspan x="19.17" y="0">al </tspan><tspan class="cls-5" x="35.54" y="0">E</tspan><tspan x="45.25" y="0">s</tspan><tspan class="cls-3" x="52.38" y="0">t</tspan><tspan x="58.04" y="0">a</tspan><tspan class="cls-6" x="66.66" y="0">t</tspan><tspan x="72.32" y="0">e</tspan></text>
+      <path class="cls-1" d="M67.49,35.51v-11.34l-8.72-6.11-8.73,6.11v2.62h-3.49v-4.36l12.22-8.73,12.21,8.73v13.09h-3.49ZM59.64,25.04h1.74v-1.74h-1.74v1.74ZM56.15,25.04h1.74v-1.74h-1.74v1.74ZM59.64,28.53h1.74v-1.74h-1.74v1.74ZM56.15,28.53h1.74v-1.74h-1.74v1.74ZM46.55,43.36l12.13,3.32,10.38-3.23c-.15-.26-.36-.49-.63-.68-.28-.19-.59-.28-.94-.28h-8.81c-.79,0-1.41-.03-1.88-.09-.47-.06-.95-.17-1.44-.35l-4.06-1.35.96-3.4,3.53,1.18c.49.15,1.08.26,1.74.35.67.09,1.66.15,2.97.18,0-.32-.1-.63-.28-.92-.19-.29-.41-.48-.68-.57l-10.21-3.75h-2.79v9.6ZM36.08,49.47v-19.19h13.26c.2,0,.41.02.61.07.2.04.39.09.57.15l10.25,3.79c.96.35,1.74.96,2.33,1.83.6.87.89,1.83.89,2.88h3.49c1.45,0,2.69.48,3.71,1.44,1.02.96,1.53,2.23,1.53,3.79v1.75l-13.96,4.36-12.22-3.4v2.53h-10.47ZM39.57,45.98h3.49v-12.21h-3.49v12.21Z"/>
+    </g>
+  </g>
+</svg>
