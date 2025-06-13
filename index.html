@@ -207,8 +207,26 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
                 ">How It Works</h1>
             </div>
         <div class="row g-5 align-items-center">
+
+            <div class="container  mt-25 mobileVersion" style="background-image: url('/img/Asset 137.jpg'); background-size: cover; background-position: center; min-height: 520px;">
+                <div class="col-12 d-flex justify-content-center mobileVersion" style="padding-top: 180%;">
+                <a href="#" class="btn btn-primary px-3 py-2 rounded-pill" data-bs-toggle="modal" data-bs-target="#detailsModal" style="
+                    font-size: 9px;
+                    font-weight: 600;
+                    background-color: #696cc7;
+                    color: #ffffff;
+                    border-radius: 30px;
+                    box-shadow: 0 4px 8px rgba(59, 101, 255, 0.382);
+                    transition: all 0.4s ease;
+                    border-color: #696cc7;
+                "                
+                onmouseover="this.style.backgroundColor='#484cbd';"
+                onmouseout="this.style.backgroundColor='#696cc7';">
+                    Let's Connect         </a>
+            </div>
+            </div>
             <!-- Text Section -->
-            <div class="col-lg-6 lttext">
+            <div class="col-lg-6 lttext laptopVersion">
                 
              
                 <div class="row gy-2 gx-4 mb-4">
@@ -305,7 +323,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             </div>
 
             <!-- Image Section -->
-            <div class="col-lg-6 justify-content-center align-items-center hw_par">
+            <div class="col-lg-6 justify-content-center align-items-center hw_par laptopVersion">
                 <img src="img/how_sec.webp" alt="hw_sec_img" class="hw_sec_img img-fluid rounded ">
             
      
@@ -616,10 +634,24 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     border-left: 0px; 
     border-right: 0px;/* Replace with your desired color */
     }
+    .mobileVersion{
+        display: none;
+    }
+    .laptopVersion{
+            display: block;
+    }
+    @media (max-width: 768px) {
+        .laptopVersion{
+            display: none;
+        }
+        .mobileVersion{
+            display: block;
+        }
+    }
 </style>
 
 
-<div class="container">
+<div class="container laptopVersion">
   <div class="accordion" id="leadComparison">
     <div class="accordion-section-title">
         <h2 style="
@@ -769,6 +801,147 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
                     Book a free demo        </a>
   </div>
 </div>
+
+<div class="container my-5 mobileVersion">
+  <center>
+    <h2 class="fw-bold mb-4 text-center" style="color: #696cc7;">How We Compare with Other Lead Generation Tactics</h2>
+  </center>
+  <!-- Paid Channels Accordion -->
+  <div class="accordion mb-3" id="comparisonAccordion">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingPaid">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePaid" aria-expanded="true" aria-controls="collapsePaid">
+          <i class="bi bi-megaphone-fill me-2" style="font-size: small;"></i> <strong style="font-size: small;">Paid Channels</strong> <span class="mx-2" style="color: #696cc7; font-size: small;"> Vs </span> <strong style="font-size: small;">Alcelerate</strong>
+        </button>
+      </h2>
+      <div id="collapsePaid" class="accordion-collapse collapse show" aria-labelledby="headingPaid" data-bs-parent="#comparisonAccordion">
+        <div class="accordion-body">
+          <div class="row g-4">
+            <div class="col-md-12">
+              <div class="border-start border-3 ps-3" style="border-left: 3px solid #696cc7; font-size: small;">
+                <h6 class="fw-bold">Paid Channels</h6>
+                <p>If your business relies on performance marketing or media buying, i.e. paid ads on platforms like Google, Meta, or LinkedIn—you will generate traffic, leads, and sales as long as the ad spend continues. However, once the spending stops, so does lead generation.</p>
+                <p>Increasing lead volume requires higher budgets, making it a continuous and often significant expense.</p>
+                <p>This approach also assumes your business has already identified effective strategies and possesses the necessary expertise to manage campaigns successfully—an area where many businesses face early challenges.</p>
+              </div>
+            </div>
+            <div class="col-md-12 text-center my-3">
+                <h5 class="fw-bold" style="color: #696cc7;">Vs</h5>
+            </div>
+            <div class="col-md-12">
+              <div class="border-start border-3 ps-3" style="border-left: 3px solid #696cc7; font-size: small;">
+                <h6 class="fw-bold">Alcelerate</h6>
+                <p>Instead of spending time finding the right paid lead strategy and building the skills to execute it, Alcelerate simplifies the process.</p>
+                <p>Just share your business and ideal customer profile—like an elevator pitch—and our AI delivers relevant contacts with their details.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Organic Channels Accordion -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOrganic">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOrganic" aria-expanded="false" aria-controls="collapseOrganic">
+          <i class="me-2 bi bi-award" style="font-size: small;"></i> <strong style="font-size: small;">Organic Channels</strong> <span class="mx-2" style="color: #696cc7; font-size: small;"> Vs </span> <strong style="font-size: small;">Alcelerate</strong>
+        </button>
+      </h2>
+      <div id="collapseOrganic" class="accordion-collapse collapse" aria-labelledby="headingOrganic" data-bs-parent="#comparisonAccordion">
+        <div class="accordion-body">
+          <div class="row g-4">
+            <div class="col-md-12">
+              <div class="border-start border-3 ps-3" style="border-left: 3px solid #696cc7; font-size: small;">
+                <h6 class="fw-bold">Organic Channels</h6>
+                <p>Organic lead generation methods like SEO, content marketing, and referrals take time to build traction and require consistent effort in content creation and optimization.</p>
+                <p>These methods often deliver long-term ROI but need patience, expertise, and ongoing content maintenance.</p>
+              </div>
+            </div>
+            <div class="col-md-12 text-center my-3">
+                <h5 class="fw-bold" style="color: #696cc7;">Vs</h5>
+            </div>
+            <div class="col-md-12">
+              <div class="border-start border-3 ps-3" style="border-left: 3px solid #696cc7; font-size: small;">
+                <h6 class="fw-bold">Alcelerate</h6>
+                <p>With Alcelerate, instead of waiting months for organic strategies to work, you can immediately connect with relevant contacts by describing your business and audience.</p>
+                <p>It's faster, simpler, and lets you focus on outreach instead of strategy setup.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOrganic">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDataBase" aria-expanded="false" aria-controls="collapseDataBase">
+          <i class="me-2 bi bi-database" style="font-size: small;"></i> <strong style="font-size: small;">Other Databases</strong> <span class="mx-2" style="color: #696cc7; font-size: small;"> Vs </span> <strong style="font-size: small;">Alcelerate</strong>
+        </button>
+      </h2>
+      <div id="collapseDataBase" class="accordion-collapse collapse" aria-labelledby="headingOrganic" data-bs-parent="#comparisonAccordion">
+        <div class="accordion-body">
+          <div class="row g-4">
+            <div class="col-md-12">
+              <div class="border-start border-3 ps-3" style="border-left: 3px solid #696cc7; font-size: small;">
+                <h6 class="fw-bold">Other Databases</h6>
+                <p>Organic lead generation methods like SEO, content marketing, and referrals take time to build traction and require consistent effort in content creation and optimization.</p>
+                <p>These methods often deliver long-term ROI but need patience, expertise, and ongoing content maintenance.</p>
+              </div>
+            </div>
+            <div class="col-md-12 text-center my-3">
+                <h5 class="fw-bold" style="color: #696cc7;">Vs</h5>
+            </div>
+            <div class="col-md-12">
+              <div class="border-start border-3 ps-3" style="border-left: 3px solid #696cc7; font-size: small;">
+                <h6 class="fw-bold">Alcelerate</h6>
+                <p>With Alcelerate, instead of waiting months for organic strategies to work, you can immediately connect with relevant contacts by describing your business and audience.</p>
+                <p>It's faster, simpler, and lets you focus on outreach instead of strategy setup.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOrganic">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMassMessage" aria-expanded="false" aria-controls="collapseMassMessage">
+          <i class="me-2 bi bi-chat-dots" style="font-size: small;"></i> <strong style="font-size: small;">Mass Messaging</strong> <span class="mx-2" style="color: #696cc7; font-size: small;"> Vs </span> <strong style="font-size: small;">Alcelerate</strong>
+        </button>
+      </h2>
+      <div id="collapseMassMessage" class="accordion-collapse collapse" aria-labelledby="headingOrganic" data-bs-parent="#comparisonAccordion">
+        <div class="accordion-body">
+          <div class="row g-4">
+            <div class="col-md-12">
+              <div class="border-start border-3 ps-3" style="border-left: 3px solid #696cc7; font-size: small;">
+                <h6 class="fw-bold">Mass Messaging</h6>
+                <p>Organic lead generation methods like SEO, content marketing, and referrals take time to build traction and require consistent effort in content creation and optimization.</p>
+                <p>These methods often deliver long-term ROI but need patience, expertise, and ongoing content maintenance.</p>
+              </div>
+            </div>
+            <div class="col-md-12 text-center my-3">
+                <h5 class="fw-bold" style="color: #696cc7;">Vs</h5>
+            </div>
+            <div class="col-md-12">
+              <div class="border-start border-3 ps-3" style="border-left: 3px solid #696cc7; font-size: small;">
+                <h6 class="fw-bold">Alcelerate</h6>
+                <p>With Alcelerate, instead of waiting months for organic strategies to work, you can immediately connect with relevant contacts by describing your business and audience.</p>
+                <p>It's faster, simpler, and lets you focus on outreach instead of strategy setup.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <button class="btn btn-demo" style="font-size: small;">Book a free demo</button>
+    </div>
+
+  </div>
+</div>
+
 
 
 
@@ -1088,7 +1261,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 
 
 
-<div class="container my-5" style="background-image: url('img/Asset85.jpg'); background-size: cover; background-position: center; min-height: 800px;">
+<div class="container my-5 laptopVersion" style="background-image: url('/img/Asset 85.jpg'); background-size: cover; background-position: center; min-height: 800px;">
   <!-- Heading -->
   <div class="text-center mb-5 py-5">
     <h2 style="
@@ -1120,6 +1293,18 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
              Don’t just take our word for it – here’s what our clients say:
         </h2>
     
+  </div>
+</div>
+
+<div class="container my-5 mobileVersion">
+  <!-- Heading -->
+  <div class="text-center mb-5 py-5">
+    <h2 class="fw-bold" style="color: #696cc7;">Reviews</h2>
+    <h5 class="fw-semibold">Real Users. Real Results. Real Revenue.</h5>
+    <p class="text-muted">Don’t just take our word for it – here’s what our clients say:</p>
+  </div>
+  <div style="background-image: url('/img/Asset 193.jpg'); background-size: cover; background-position: center; min-height: 800px;">
+
   </div>
 </div>
 
