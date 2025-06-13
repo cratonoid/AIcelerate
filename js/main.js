@@ -105,7 +105,7 @@
     },
   });
   const scriptURL =
-    "https://script.google.com/macros/s/AKfycbxseSQbXdO_udaUOI6IUPs7-4Rgaektj5naVPPczbvzGttgGuf7EQh9O5bkzYFtOBF9/exec";
+    "https://script.google.com/macros/s/AKfycbxtcHXgyBclKfNMpN5Eep7e_HtgT5LFjpXipleaxFshc0lt9uGFCuU7B9KU9ngwp_T5oQ/exec";
 
   $("#submitForm").click(function (event) {
     event.preventDefault();
