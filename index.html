@@ -27,6 +27,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Bootstrap Select CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/css/bootstrap-select.min.css" />
+
+    <!-- Bootstrap Select JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/js/bootstrap-select.min.js"></script>
+
 
 
     <!-- Libraries Stylesheet -->
@@ -1738,13 +1744,8 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
               <label for="whatsappNumber" class="form-label" style="font-family: 'League Spartan', sans-serif; font-size: 18px;">WhatsApp Number</label>
               <div class="input-group">
                 <span class="input-group-text bg-light"><i class="bi bi-whatsapp"></i></span>
-                <select class="form-select" style="max-width: 100px;">
-                  <option value="+1">+1</option>
-                  <option value="+44">+44</option>
-                  <option value="+91" selected>+91</option>
-                  <option value="+61">+61</option>
-                  <option value="+971">+971</option>
-                  <!-- Add more as needed -->
+                <select class="form-select selectpicker" data-live-search="true" id="countryCode" style="max-width: 100px;">
+                    <option selected disabled>Select Code</option>
                 </select>
                 <input type="tel" class="form-control" id="whatsappNumber" placeholder="Enter WhatsApp number">
               </div>
@@ -2025,6 +2026,31 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 <!-- Scripts at the end of body -->
 
 <script>
+
+  fetch('https://restcountries.com/v3.1/all')
+  .then(res => res.json())
+  .then(data => {
+    const countrySelect = document.getElementById('countryCode');
+    const countries = data
+      .filter(country => country.idd && country.idd.root) // Ensure calling code exists
+      .map(country => {
+        const code = country.idd.root + (country.idd.suffixes ? country.idd.suffixes[0] : '');
+        const name = country.name.common;
+        const flag = country.flags.svg;
+        return { name, code, flag };
+      })
+      .sort((a, b) => a.name.localeCompare(b.name));
+
+    countries.forEach(({ name, code, flag }) => {
+      const option = document.createElement('option');
+      option.value = code;
+      option.innerHTML = `${name} (${code})`;
+      countrySelect.appendChild(option);
+    });
+
+    $('.selectpicker').selectpicker('refresh'); // Re-initialize after appending
+  })
+  .catch(err => console.error('Error loading countries:', err));
     
 //     document.addEventListener("DOMContentLoaded", function () {
 //     let select1 = document.getElementById("connectTime");
