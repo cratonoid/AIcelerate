@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 209.74 64.93">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5f60b3;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        fill: #2f333f;
+        font-family: Montserrat-Regular, Montserrat;
+        font-size: 14.6px;
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-6 {
+        fill: url(#linear-gradient);
+        opacity: .7;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="104.87" y1="-1.73" x2="104.87" y2="58.37" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#d7eff9"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <rect class="cls-6" width="209.74" height="64.93" rx="6.85" ry="6.85"/>
+      <text class="cls-5" transform="translate(91.34 35.38)"><tspan x="0" y="0">Fin</tspan><tspan class="cls-3" x="23.04" y="0">T</tspan><tspan class="cls-2" x="30.63" y="0">e</tspan><tspan class="cls-4" x="39.46" y="0">c</tspan><tspan x="47.6" y="0">h</tspan></text>
+      <path class="cls-1" d="M48.59,48.18v-3.49l3.49-3.49v6.98h-3.49ZM55.57,48.18v-10.47l3.49-3.49v13.96h-3.49ZM62.55,48.18v-13.96l3.49,3.53v10.43h-3.49ZM69.53,48.18v-10.43l3.49-3.49v13.92h-3.49ZM76.51,48.18v-17.45l3.49-3.49v20.94h-3.49ZM48.59,39.15v-4.93l12.21-12.22,6.98,6.98,12.21-12.22v4.93l-12.21,12.21-6.98-6.98-12.21,12.21Z"/>
+    </g>
+  </g>
+</svg>
