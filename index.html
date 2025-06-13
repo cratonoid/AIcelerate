@@ -138,18 +138,19 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
         background-size: 100% auto;
         height: auto;        
         width: 100vw;
-        min-height: calc(70vh - 35px) !important; /* Ensure space at bottom */
+        margin-bottom: -30%;
     }
     .heroSection1 {
+      padding-bottom: 125%;
         background: url('img/Asset 112.webp') no-repeat top center; /* Align to top */
         background-size: 100% auto;
         height: auto;        
         width: 100vw;
-        min-height: calc(80vh - 200px) !important; /* Ensure space at bottom */
     }
-    .apply-btn {
-        position: relative !important;
-        transform: translateX(15%) translateY(37rem);
+    .apply-btn {          
+    margin-top: 120% !important;
+        margin-left: 26% !important;
+      
     }
     .mb-5 {
         margin-bottom: 0rem !important;
@@ -173,9 +174,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 
 /* Apply Button Position */
 .apply-btn {
-    position: absolute;
-    bottom: 12%;
-    left: 7%;
+    position: absolute;    
     z-index: 2;
     border-radius: 30px; 
     font-weight: 600;
@@ -185,6 +184,8 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     box-shadow: 0 4px 8px rgba(59, 101, 255, 0.382);
     transition: all 0.4s ease;                            
     font-size: 18px;
+    margin-top: 30%;
+    margin-left: 5%;
 }
 .btn-primary{
     border-radius: 10px;
@@ -579,6 +580,9 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     
     /* Background for Mobile */
 @media (max-width: 768px) {
+  .hwcards{
+    height:12.5rem
+  }
     .hwdesc1{
         font-size: 2.4rem !important;
         margin-left: -1rem;
@@ -637,6 +641,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
   }
 
   .btn-demo {
+    font-family: 'Montserrat', sans-serif;;
     background-color: #696cc7;
     color: #fff;
     border-radius: 25px;
