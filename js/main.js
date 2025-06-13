@@ -80,7 +80,8 @@
   const iti = window.intlTelInput(input, {
     initialCountry: "ae",
     separateDialCode: true, // shows dial code separately
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+    utilsScript:
+      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
   });
   // Testimonials carousel
   $(".testimonial-carousel").owlCarousel({
@@ -111,22 +112,38 @@
 
     // Get input values
     let fullName = $("#fullName").val().trim();
-    
+
     let email = $("#email").val().trim();
     let businessName = $("#businessName").val();
     let connectTime = $("#connectTime").val();
     let annualRevenue = $("#annualRevenue").val();
     let url = sessionStorage.getItem("url");
+    const now = new Date();
+    const formatted =
+      now.getFullYear() +
+      "-" +
+      String(now.getMonth() + 1).padStart(2, "0") +
+      "-" +
+      String(now.getDate()).padStart(2, "0") +
+      " " +
+      String(now.getHours()).padStart(2, "0") +
+      ":" +
+      String(now.getMinutes()).padStart(2, "0") +
+      ":" +
+      String(now.getSeconds()).padStart(2, "0");
 
-  // Example: get country code and full number on form submit
-  function getPhoneDetails() {
-    const dialCode = iti.getSelectedCountryData().dialCode;
-    const countryCode = "+" + dialCode;
-    const fullNumber = iti.getNumber(); // includes country code
-    const nationalNumber = iti.getNumber(intlTelInputUtils.numberFormat.NATIONAL); // without country code
-    return fullNumber
-  } 
-  let whatsappNumber = getPhoneDetails();
+    // Example: get country code and full number on form submit
+
+    function getPhoneDetails() {
+      const dialCode = iti.getSelectedCountryData().dialCode;
+      const countryCode = "+" + dialCode;
+      const fullNumber = iti.getNumber(); // includes country code
+      const nationalNumber = iti.getNumber(
+        intlTelInputUtils.numberFormat.NATIONAL
+      ); // without country code
+      return fullNumber;
+    }
+    let whatsappNumber = getPhoneDetails();
 
     // Validation Regex
     let nameRegex = /^[a-zA-Z\s]+$/;
@@ -142,11 +159,7 @@
       return;
     }
     if (whatsappNumber === "") {
-      swal(
-        "Invalid Number",
-        "",
-        "error"
-      );
+      swal("Invalid Number", "", "error");
       return;
     }
     if (email === "" || !emailRegex.test(email)) {
@@ -179,6 +192,7 @@
     }
 
     let formData = {
+      "Date and Time": formatted,
       "Full Name": fullName,
       "WhatsApp Number": whatsappNumber,
       "Email ID": email,
@@ -189,9 +203,8 @@
       "Lp name": "AIcelerate",
     };
 
-    console.log(formData);
-      $("#detailsModal").css("display", "none");
-      $(".modal-backdrop").remove();
+    $("#detailsModal").css("display", "none");
+    $(".modal-backdrop").remove();
     $.ajax({
       url: scriptURL,
       type: "POST",
@@ -205,6 +218,4 @@
       },
     });
   });
-
-
 })(jQuery);
