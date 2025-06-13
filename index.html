@@ -47,6 +47,7 @@
 
     <!-- Bootstrap Select JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta3/js/bootstrap-select.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
 
@@ -758,7 +759,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     <!-- Paid Channels -->
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
-        <div class="accordion-button custom-accordion-button no-button-style" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+        <div class="accordion-button collapsed custom-accordion-button no-button-style" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne" onclick="toggleCollapseOne()">
             <div class="rowprop row w-100 align-items-center text-center">
                 <div class="col-md-5 align-items-center text-center">
                     <i class="me-2 bi bi-megaphone"></i>
@@ -769,7 +770,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             </div>
         </div>
       </h2>
-      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#leadComparison">
+      <div id="collapseOne" class="accordion-collapse collapse">
         <div class="accordion-body row">
           <div class="col-md-1"></div>
           <div class="col-md-5">
@@ -789,7 +790,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     <!-- Organic Channels -->
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingTwo">
-        <div class="accordion-button custom-accordion-button no-button-style" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+        <div class="accordion-button custom-accordion-button no-button-style" data-bs-toggle="collapse" onclick="toggleCollapseTwo()">
 
             <div class="rowprop row w-100 align-items-center">
                 <div class="col-md-5 align-items-center text-center">
@@ -801,7 +802,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             </div>
         </div>
       </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#leadComparison">
+      <div id="collapseTwo" class="accordion-collapse collapse">
         <div class="accordion-body row">
             <div class="col-md-1"></div>
           <div class="col-md-5">
@@ -818,7 +819,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     <!-- Other Databases -->
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingThree">
-        <div class="accordion-button custom-accordion-button no-button-style" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+        <div class="accordion-button custom-accordion-button no-button-style" data-bs-toggle="collapse" onclick="toggleCollapseThree()">
 
             <div class="rowprop row w-100 align-items-center">
                 <div class="col-md-5 align-items-center text-center">
@@ -830,7 +831,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             </div>
         </div>
       </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#leadComparison">
+      <div id="collapseThree" class="accordion-collapse collapse">
         <div class="accordion-body row">
             <div class="col-md-1"></div>
           <div class="col-md-5">
@@ -847,7 +848,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     <!-- Mass Messaging -->
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingFour">
-         <div class="accordion-button custom-accordion-button no-button-style" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+         <div class="accordion-button custom-accordion-button no-button-style" data-bs-toggle="collapse" onclick="toggleCollapseFour()">
 
             <div class="rowprop row w-100 align-items-center text-center">
                 <div class="col-md-5 align-items-center text-center">
@@ -859,7 +860,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             </div>
         </div>
       </h2>
-      <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#leadComparison">
+      <div id="collapseFour" class="accordion-collapse collapse">
         <div class="accordion-body row">
             <div class="col-md-1"></div>
           <div class="col-md-5">
@@ -909,7 +910,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingPaid">
-       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePaid" aria-expanded="true" aria-controls="collapsePaid">
+       <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true" onclick="toggleCollapsePaid()">
             <span class="d-flex align-items-center gap-1 w-100" style="white-space: nowrap;">
                 <i class="bi bi-megaphone-fill" style="font-size: small;"></i>
                 <strong style="font-size: small; font-weight: 800;">Paid Channels</strong>
@@ -918,7 +919,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             </span>
         </button>
       </h2>
-      <div id="collapsePaid" class="accordion-collapse collapse" aria-labelledby="headingPaid" data-bs-parent="#comparisonAccordion">
+      <div id="collapsePaid" class="accordion-collapse collapse" aria-labelledby="headingPaid">
         <div class="accordion-body">
           <div class="row g-4">
             <div class="col-md-12">
@@ -947,7 +948,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     <!-- Organic Channels Accordion -->
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOrganic">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOrganic" aria-expanded="false" aria-controls="collapseOrganic">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" onclick="toggleCollapseOrganic()">
            <span class="d-flex align-items-center gap-1 w-100" style="white-space: nowrap;">
                 <i class="me-2 bi bi-award" style="font-size: small;"></i>
                 <strong style="font-size: small;font-weight: 800;">Organic Channels</strong>
@@ -956,7 +957,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             </span>
         </button>
       </h2>
-      <div id="collapseOrganic" class="accordion-collapse collapse" aria-labelledby="headingOrganic" data-bs-parent="#comparisonAccordion">
+      <div id="collapseOrganic" class="accordion-collapse collapse" aria-labelledby="headingOrganic">
         <div class="accordion-body">
           <div class="row g-4">
             <div class="col-md-12">
@@ -983,7 +984,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOrganic">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDataBase" aria-expanded="false" aria-controls="collapseDataBase">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" onclick="toggleCollapseDataBase()">
           <span class="d-flex align-items-center gap-1 w-100" style="white-space: nowrap;">
                 <i class="me-2 bi bi-database" style="font-size: small;"></i>
                 <strong style="font-size: small; font-weight: 800;">Other Databases</strong>
@@ -992,7 +993,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             </span>
         </button>
       </h2>
-      <div id="collapseDataBase" class="accordion-collapse collapse" aria-labelledby="headingOrganic" data-bs-parent="#comparisonAccordion">
+      <div id="collapseDataBase" class="accordion-collapse collapse" aria-labelledby="headingOrganic">
         <div class="accordion-body">
           <div class="row g-4">
             <div class="col-md-12">
@@ -1019,7 +1020,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOrganic">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMassMessage" aria-expanded="false" aria-controls="collapseMassMessage">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" onclick="toggleCollapseMassMessage()">
             <span class="d-flex align-items-center gap-1 w-100" style="white-space: nowrap;">
                 <i class="me-2 bi bi-chat-dots" style="font-size: small;"></i>
                 <strong style="font-size: small; font-weight: 800;">Mass Messaging</strong>
@@ -1028,7 +1029,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             </span>
         </button>
       </h2>
-      <div id="collapseMassMessage" class="accordion-collapse collapse" aria-labelledby="headingOrganic" data-bs-parent="#comparisonAccordion">
+      <div id="collapseMassMessage" class="accordion-collapse collapse" aria-labelledby="headingOrganic">
         <div class="accordion-body">
           <div class="row g-4">
             <div class="col-md-12">
@@ -1054,8 +1055,11 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     </div>
 
     <div class="text-center mt-4">
-        <button class="ltcontbtn btn btn-demo" style="font-size: small;">Book a free demo</button>
+        <button class="ltcontbtn btn btn-demo" style="font-size: small;" data-bs-toggle="modal" data-bs-target="#detailsModal">
+            Book a free demo
+        </button>
     </div>
+
 
   </div>
 </div>
@@ -1675,6 +1679,9 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 
 
 <style>
+    #whatsappNumber{
+        width: 40.3rem;
+    }
     @media (max-width: 768px) {
       .whowerow{
         padding-left: 0rem !important;
@@ -1692,6 +1699,9 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
         .txtcol{
             justify-items: center;
         }
+         #whatsappNumber{
+        width: 15.8rem;
+    }
     }
 </style>
 
@@ -1725,7 +1735,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             <label for="whatsappNumber" class="form-label">WhatsApp Number</label>
             <div class="input-group" style="width: 100%;">
                 <span class="input-group-text bg-light"><i class="bi bi-whatsapp"></i></span>
-                <input type="tel" id="whatsappNumber" class="form-control" style="width: 40.3rem;" placeholder="Enter WhatsApp number">
+                <input type="tel" id="whatsappNumber" class="form-control" placeholder="Enter WhatsApp number">
             </div>
             </div>  
 
@@ -2012,7 +2022,95 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
         sessionStorage.setItem('url', fullUrl);
     }
     getUTMParameters();
-
+    function toggleCollapsePaid(){
+        const collapseOne = document.getElementById('collapsePaid');
+        if (collapseOne.classList.contains('show')) {
+            $('#collapsePaid').collapse('hide'); // jQuery way
+        } else {
+            $('#collapsePaid').collapse('show');
+            $('#collapseDataBase').collapse('hide');
+            $('#collapseOrganic').collapse('hide');
+            $('#collapseMassMessage').collapse('hide');
+        }
+    }
+    function toggleCollapseOrganic(){
+        const collapseOne = document.getElementById('collapseOrganic');
+        if (collapseOne.classList.contains('show')) {
+            $('#collapseOrganic').collapse('hide'); // jQuery way
+        } else {
+            $('#collapseOrganic').collapse('show');
+            $('#collapsePaid').collapse('hide');
+            $('#collapseDataBase').collapse('hide');
+            $('#collapseMassMessage').collapse('hide');
+        }
+    }
+    function toggleCollapseDataBase(){
+         const collapseOne = document.getElementById('collapseDataBase');
+        if (collapseOne.classList.contains('show')) {
+            $('#collapseDataBase').collapse('hide'); // jQuery way
+        } else {
+            $('#collapseDataBase').collapse('show');
+            $('#collapsePaid').collapse('hide');
+            $('#collapseOrganic').collapse('hide');
+            $('#collapseMassMessage').collapse('hide');
+        }
+    }
+    function toggleCollapseMassMessage(){
+        const collapseOne = document.getElementById('collapseMassMessage');
+        if (collapseOne.classList.contains('show')) {
+            $('#collapseMassMessage').collapse('hide'); // jQuery way
+        } else {
+            $('#collapseMassMessage').collapse('show');
+            $('#collapsePaid').collapse('hide');
+            $('#collapseDataBase').collapse('hide');
+            $('#collapseOrganic').collapse('hide');
+        }
+    }
+    function toggleCollapseOne() {
+        const collapseOne = document.getElementById('collapseOne');
+        if (collapseOne.classList.contains('show')) {
+            $('#collapseOne').collapse('hide'); // jQuery way
+        } else {
+            $('#collapseOne').collapse('show');
+            $('#collapseTwo').collapse('hide');
+            $('#collapseThree').collapse('hide');
+            $('#collapseFour').collapse('hide');
+        }
+    }
+    function toggleCollapseTwo() {
+         const collapseOne = document.getElementById('collapseTwo');
+            if (collapseOne.classList.contains('show')) {
+                $('#collapseTwo').collapse('hide'); // jQuery way
+            } else {
+                $('#collapseTwo').collapse('show');
+                $('#collapseOne').collapse('hide');
+                $('#collapseThree').collapse('hide');
+                $('#collapseFour').collapse('hide');
+            }
+    }
+    function toggleCollapseThree() {
+        const collapseOne = document.getElementById('collapseThree');
+        if (collapseOne.classList.contains('show')) {
+            $('#collapseThree').collapse('hide'); // jQuery way
+        } else {
+            $('#collapseThree').collapse('show');
+            $('#collapseOne').collapse('hide');
+            $('#collapseTwo').collapse('hide');
+            $('#collapseFour').collapse('hide');
+        }
+    }
+    function toggleCollapseFour() {
+         const collapseOne = document.getElementById('collapseFour');
+        if (collapseOne.classList.contains('show')) {
+            $('#collapseFour').collapse('hide'); // jQuery way
+        } else {
+            $('#collapseFour').collapse('show');
+            $('#collapseOne').collapse('hide');
+            $('#collapseTwo').collapse('hide');
+            $('#collapseThree').collapse('hide');
+            $('#collapseFour').collapse('hide');
+        }
+    }
 
  /* const input = document.querySelector("#whatsappNumber");
   const iti = window.intlTelInput(input, {
