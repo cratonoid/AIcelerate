@@ -425,7 +425,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
         padding-bottom: 1rem;
       }
         .ltcontbtn{
-          padding: 10px 40px !important;
+          padding: 7px 40px !important;
           font-weight: 600 !important;
             font-size: 145% !important;
         }
@@ -1218,38 +1218,13 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 
 <!-- Ideal For -->
  <div class="idealcont container py-5">
-    <div class="text-center mb-5">          
-        <h2 style="
-            font-family: 'Overpass', sans-serif;
-            font-weight: 900;
-            font-size: 2.5rem;
-            color: #696cc7;   
-            margin-bottom: 0px;
-            letter-spacing: 0.5px;
-        ">
-            Ideal For
-        </h2>
-        <h2 style="
-            font-family: 'Poppins', sans-serif;
-            font-size: 22px;
-            font-weight: 900;
-            color: #000000;
-            margin-bottom: 2px;            
-            letter-spacing: 0.5px;
-        ">
-            Tailored Systems for each industry
-        </h2>   
-        <h2 style="
-            font-family: 'Poppins', sans-serif;
-            font-size: 15px;
-            color: #5b5b5b;
-            letter-spacing: 0.5px;
-        ">
-             We’ve built high-performing outbound funnels across sectors like:
-        </h2>     
-    </div>
+  <div class="text-center mb-5">          
+    <h2 style="font-family: 'Overpass', sans-serif; font-weight: 900; font-size: 2.5rem; color: #696cc7; margin-bottom: 0px; letter-spacing: 0.5px;">Ideal For</h2>
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 900; color: #000000; margin-bottom: 2px; letter-spacing: 0.5px;">Tailored Systems for each industry</h2>   
+    <h2 style="font-family: 'Poppins', sans-serif; font-size: 15px; color: #5b5b5b; letter-spacing: 0.5px;">We’ve built high-performing outbound funnels across sectors like:</h2>     
+  </div>
 
-    <div class="idealcards row g-4">
+    <div class="idealcards row g-4 desktop-only">
         <!-- Card 1 -->
         <div class="col-6 col-md-6 col-lg-4">
             <div class="card border-0 shadow-sm "   
@@ -1339,6 +1314,12 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 
         
     </div>
+      <!-- ✅ Mobile Image -->
+  <div class="row mobile-only mt-4">
+    <div class="col-12 d-flex justify-content-center">
+      <img src="img/mobcards.png" alt="Mobile View Image" style="width: 100%; max-width: 100%;">
+    </div>
+  </div>
 
     <div class="row mt-4">
             <div class="col-12 d-flex justify-content-center">
@@ -1371,6 +1352,15 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
         justify-items: center;
     }
 
+     /* ✅ Responsive visibility control */
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: flex;
+  }
+
      @media (max-width: 768px) {
 
         .idealcards {
@@ -1387,6 +1377,13 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             font-size: 145% !important;
             padding: 10px 30px !important;
         }
+        .desktop-only {
+      display: none !important;
+    }
+
+    .mobile-only {
+      display: block !important;
+    }
     }
 </style>
 
