@@ -267,5 +267,6 @@
         console.error("Google Sheets AJAX Error:", error);
       },
     });
+    window.location.href = "thankyou.html";
   });
 })(jQuery);
