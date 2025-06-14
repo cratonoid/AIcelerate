@@ -218,6 +218,7 @@
     //   },
     // });
     // Submit to your existing backend (Google Sheet or other script)
+    console.log(formData);
     $.ajax({
       url: scriptURL,
       type: "POST",
