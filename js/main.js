@@ -238,22 +238,10 @@
             { name: "phone", value: whatsappNumber },
             { name: "company", value: businessName },
             { name: "annualrevenue", value: annualRevenue },
-            {
-              name: "connect_time__c",
-              value: connectTime,
-            },
-            {
-              name: "landing_page_url",
-              value: url || window.location.href,
-            },
-            {
-              name: "lp_name",
-              value: "AIcelerate",
-            },
-            {
-              name: "submission_time",
-              value: formatted,
-            },
+            { name: "connect_time__c", value: connectTime },
+            { name: "landing_page_url", value: url || window.location.href },
+            { name: "lp_name", value: "AIcelerate" },
+            { name: "submission_time", value: formatted },
           ],
           context: {
             hutk: getCookie("hubspotutk"),
