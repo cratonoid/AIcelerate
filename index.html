@@ -50,16 +50,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
+  
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.min.css"/>
 
         <!-- HubSpot Tracking Code -->
@@ -2018,18 +2013,458 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script async defer src="https://connect.facebook.net/en_US/fbevents.js"></script>
+     <script async defer src="https://connect.facebook.net/en_US/fbevents.js"></script>
 
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
     <!-- Your existing HTML -->
+
+
+
+<!-- style.css  -->
+
+<style>
+
+  /********** Template CSS **********/
+:root {
+    --primary: #670a0a;
+    --light: #f8f2e5;
+    --dark: #000000;
+}
+
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+.fw-semi-bold {
+    font-weight: 700 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-family: 'Chunk Five', serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btnry,.btn-prima
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 0px;
+}
+
+
+/*** Navbar ***/
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+    height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-weight: 500;
+}
+
+.navbar-light.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .dropdown-menu.fade-down {
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        transform: rotateX(0deg);
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+/*** Header carousel ***/
+@media (max-width: 768px) {
+    .header-carousel .owl-carousel-item {
+        position: relative;
+        min-height: 500px;
+    }
+    
+    .header-carousel .owl-carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.header-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-carousel .owl-nav .owl-prev,
+.header-carousel .owl-nav .owl-next {
+    margin: 7px 0;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.header-carousel .owl-nav .owl-prev:hover,
+.header-carousel .owl-nav .owl-next:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.page-header {
+    background: linear-gradient(rgba(24, 29, 56, .7), rgba(24, 29, 56, .7)), url(../img/carousel-1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-header-inner {
+    background: rgba(15, 23, 43, .7);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--light);
+}
+
+
+/*** Section Title ***/
+.section-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 80px);
+    height: 2px;
+    top: 4px;
+    left: -40px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 120px);
+    height: 2px;
+    bottom: 5px;
+    left: -60px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title.text-start::before {
+    width: calc(100% + 40px);
+    left: 0;
+}
+
+.section-title.text-start::after {
+    width: calc(100% + 60px);
+    left: 0;
+}
+
+
+/*** Service ***/
+.service-item {
+    background: var(--light);
+    transition: .5s;
+}
+
+.service-item:hover {
+    margin-top: -10px;
+    background: var(--primary);
+}
+
+.service-item * {
+    transition: .5s;
+}
+
+.service-item:hover * {
+    color: var(--light) !important;
+}
+
+
+/*** Categories & Courses ***/
+.category img,
+.course-item img {
+    transition: .5s;
+}
+
+.category a:hover img,
+.course-item:hover img {
+    transform: scale(1.1);
+}
+
+
+/*** Team ***/
+.team-item img {
+    transition: .5s;
+}
+
+.team-item:hover img {
+    transform: scale(1.1);
+}
+
+
+/*** Testimonial ***/
+.testimonial-carousel::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+.testimonial-carousel::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 300px;
+    }
+}
+
+.testimonial-carousel .owl-item .testimonial-text,
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text {
+    background: var(--primary) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    color: #FFFFFF !important;
+}
+
+.testimonial-carousel .owl-dots {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #CCCCCC;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+
+/*** Footer ***/
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    font-weight: normal;
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+</style>
+
+
+
 
 
 <!-- Scripts at the end of body -->
@@ -2131,60 +2566,286 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
         }
     }
 
- /* const input = document.querySelector("#whatsappNumber");
-  const iti = window.intlTelInput(input, {
-    initialCountry: "in", // optional
-    separateDialCode: true, // shows dial code separately
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+
+</script>
+
+<!-- main.js -->
+ <script>
+  (function ($) {
+  "use strict";
+
+  // Spinner
+  var spinner = function () {
+    setTimeout(function () {
+      if ($("#spinner").length > 0) {
+        $("#spinner").removeClass("show");
+      }
+    }, 1);
+  };
+  spinner();
+
+  // Initiate the wowjs
+  new WOW().init();
+
+  // Sticky Navbar
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 300) {
+      $(".sticky-top").css("top", "0px");
+    } else {
+      $(".sticky-top").css("top", "-100px");
+    }
   });
 
-  // Example: get country code and full number on form submit
-  function getPhoneDetails() {
-    const dialCode = iti.getSelectedCountryData().dialCode;
-    const countryCode = "+" + dialCode;
-    const fullNumber = iti.getNumber(); // includes country code
-    const nationalNumber = iti.getNumber(intlTelInputUtils.numberFormat.NATIONAL); // without country code
+  // Dropdown on mouse hover
+  const $dropdown = $(".dropdown");
+  const $dropdownToggle = $(".dropdown-toggle");
+  const $dropdownMenu = $(".dropdown-menu");
+  const showClass = "show";
 
-    console.log("Country Code:", countryCode);     // e.g., +91
-    console.log("Full Number:", fullNumber);       // e.g., +919876543210
-    console.log("National Number:", nationalNumber); // e.g., 9876543210
-  } */
+  $(window).on("load resize", function () {
+    if (this.matchMedia("(min-width: 992px)").matches) {
+      $dropdown.hover(
+        function () {
+          const $this = $(this);
+          $this.addClass(showClass);
+          $this.find($dropdownToggle).attr("aria-expanded", "true");
+          $this.find($dropdownMenu).addClass(showClass);
+        },
+        function () {
+          const $this = $(this);
+          $this.removeClass(showClass);
+          $this.find($dropdownToggle).attr("aria-expanded", "false");
+          $this.find($dropdownMenu).removeClass(showClass);
+        }
+      );
+    } else {
+      $dropdown.off("mouseenter mouseleave");
+    }
+  });
 
-    
-//     document.addEventListener("DOMContentLoaded", function () {
-//     let select1 = document.getElementById("connectTime");
-//     let select2 = document.getElementById("mainFormTime");
-//     let select3 = document.getElementById("secondFormTime");
+  // Back to top button
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 200) {
+      $(".back-to-top").fadeIn("fast");
+    } else {
+      $(".back-to-top").fadeOut("fast");
+    }
+  });
+  $(".back-to-top").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 10, "easeInOutExpo");
+    return false;
+  });
 
-//     // Function to populate the dropdown
-//     function populateDropdown(select) {
-//         // Clear any existing options
-//         select.innerHTML = "";
+  // Header carousel
+  $(".header-carousel").owlCarousel({
+    autoplay: true,
+    smartSpeed: 1500,
+    items: 1,
+    dots: false,
+    loop: true,
+    nav: true,
+    navText: [
+      '<i class="bi bi-chevron-left"></i>',
+      '<i class="bi bi-chevron-right"></i>',
+    ],
+  });
+  const input = document.querySelector("#whatsappNumber");
+  const iti = window.intlTelInput(input, {
+    initialCountry: "ae",
+    separateDialCode: true, // shows dial code separately
+    utilsScript:
+      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+  });
+  // Testimonials carousel
+  $(".testimonial-carousel").owlCarousel({
+    autoplay: true,
+    smartSpeed: 1000,
+    center: true,
+    margin: 24,
+    dots: true,
+    loop: true,
+    nav: false,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 2,
+      },
+      992: {
+        items: 3,
+      },
+    },
+  });
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxtcHXgyBclKfNMpN5Eep7e_HtgT5LFjpXipleaxFshc0lt9uGFCuU7B9KU9ngwp_T5oQ/exec";
 
-//         // Default placeholder option
-//         let defaultOption = new Option("--:--", "");
-//         select.appendChild(defaultOption);
+  $("#submitForm").click(function (event) {
+    event.preventDefault();
 
-//         let timeIntervals = 15; // 15-minute intervals
+    // Get input values
+    let fullName = $("#fullName").val().trim();
 
-//         for (let hours = 0; hours < 24; hours++) {
-//             for (let minutes = 0; minutes < 60; minutes += timeIntervals) {
-//                 let ampm = hours < 12 ? "AM" : "PM";
-//                 let displayHour = hours % 12 || 12; // Convert 24-hour to 12-hour format
-//                 let displayMinutes = minutes.toString().padStart(2, "0");
-//                 let timeString = `${displayHour}:${displayMinutes} ${ampm}`;
-//                 let option = new Option(timeString, timeString);
-//                 select.appendChild(option);
-//             }
-//         }
-//     }
+    let email = $("#email").val().trim();
+    let businessName = $("#businessName").val();
+    let connectTime = $("#connectTime").val();
+    let annualRevenue = $("#annualRevenue").val();
+    let url = sessionStorage.getItem("url");
+    const now = new Date();
+    const formatted =
+      now.getFullYear() +
+      "-" +
+      String(now.getMonth() + 1).padStart(2, "0") +
+      "-" +
+      String(now.getDate()).padStart(2, "0") +
+      " " +
+      String(now.getHours()).padStart(2, "0") +
+      ":" +
+      String(now.getMinutes()).padStart(2, "0") +
+      ":" +
+      String(now.getSeconds()).padStart(2, "0");
 
-//     // Populate both dropdowns
-//     if (select1) populateDropdown(select1);
-//     if (select2) populateDropdown(select2);
-//     if (select3) populateDropdown(select3);
-// });
-</script>
+    // Example: get country code and full number on form submit
+
+    function getPhoneDetails() {
+      const dialCode = iti.getSelectedCountryData().dialCode;
+      const countryCode = "+" + dialCode;
+      const fullNumber = iti.getNumber(); // includes country code
+      const nationalNumber = iti.getNumber(
+        intlTelInputUtils.numberFormat.NATIONAL
+      ); // without country code
+      return fullNumber;
+    }
+    let whatsappNumber = getPhoneDetails();
+
+    // Validation Regex
+    let nameRegex = /^[a-zA-Z\s]+$/;
+    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    // Validation Checks
+    if (fullName === "" || !nameRegex.test(fullName)) {
+      swal(
+        "Invalid Name",
+        "Please enter a valid full name (letters only).",
+        "error"
+      );
+      return;
+    }
+    if (whatsappNumber === "") {
+      swal("Invalid Number", "", "error");
+      return;
+    }
+    if (email === "" || !emailRegex.test(email)) {
+      swal("Invalid Email", "Please enter a valid email address.", "error");
+      return;
+    }
+    if (businessName === "") {
+      swal(
+        "Invalid Business Name",
+        "Please enter a valid Business Name.",
+        "error"
+      );
+      return;
+    }
+    if (annualRevenue === "") {
+      swal(
+        "Invalid Annual Revenue",
+        "Please enter a valid Annual Revenue.",
+        "error"
+      );
+      return;
+    }
+    if (connectTime === "") {
+      swal(
+        "Invalid Time",
+        "Please select a convenient time to connect.",
+        "error"
+      );
+      return;
+    }
+
+    let formData = {
+      "Date and Time": formatted,
+      "Full Name": fullName,
+      "WhatsApp Number": whatsappNumber,
+      "Email ID": email,
+      "Business Name": businessName,
+      "Annual Revenue": annualRevenue,
+      "Convenient Time to Connect": connectTime,
+      Url: url,
+      "Lp name": "AIcelerate",
+    };
+
+    $("#detailsModal").css("display", "none");
+    $(".modal-backdrop").remove();
+    // $.ajax({
+    //   url: scriptURL,
+    //   type: "POST",
+    //   data: formData,
+    //   contentType: "application/x-www-form-urlencoded",
+    //   success: function (response) {
+    //     console.log("Form submitted successfully", response);
+    //   },
+    //   error: function (xhr, status, error) {
+    //     console.error("AJAX Error:", error);
+    //   },
+    // });
+    // Submit to your existing backend (Google Sheet or other script)
+    console.log(formData);
+    $.ajax({
+      url: scriptURL,
+      type: "POST",
+      data: formData,
+      contentType: "application/x-www-form-urlencoded",
+      success: function (response) {
+        console.log("Form submitted successfully to Google Sheet", response);
+
+        // Now ALSO send to HubSpot
+        const portalId = "146250154";
+        const formId = "1232c850-be75-48a6-ae66-88eb6b75483c";
+
+        const hsData = {
+          fields: [
+            { name: "firstname", value: fullName },
+            { name: "email", value: email },
+            { name: "phone", value: whatsappNumber },
+            { name: "company", value: businessName },
+            { name: "annualrevenue", value: annualRevenue },
+            { name: "connect_time__c", value: connectTime },
+            { name: "landing_page_url", value: url || window.location.href },
+            { name: "lp_name", value: "AIcelerate" },
+            { name: "submission_time", value: formatted },
+          ],
+          context: {
+            hutk: getCookie("hubspotutk"),
+            pageUri: window.location.href,
+            pageName: document.title,
+          },
+        };
+
+        $.ajax({
+          url: `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`,
+          type: "POST",
+          contentType: "application/json",
+          data: JSON.stringify(hsData),
+          success: function (hsResponse) {
+            console.log("Also submitted to HubSpot", hsResponse);
+          },
+          error: function (xhr, status, error) {
+            console.error("HubSpot Submission Error:", error);
+          },
+        });
+      },
+      error: function (xhr, status, error) {
+        console.error("Google Sheets AJAX Error:", error);
+      },
+    });
+    window.location.href = "thankyou.html";
+  });
+})(jQuery);
+
+ </script>
+
 </body>
 
 </html>
