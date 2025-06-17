@@ -2654,10 +2654,10 @@ document.addEventListener("DOMContentLoaded", function() {
       );
       return;
     }
-    if (whatsappNumber === "") {
-      swal("Invalid Number", "", "error");
-      return;
-    }
+    if (whatsappNumber === "" || /[a-zA-Z]/.test(whatsappNumber)) {
+  swal("Invalid Number", "Please enter a valid WhatsApp number (no letters allowed).", "error");
+  return;
+}
     if (email === "" || !emailRegex.test(email)) {
       swal("Invalid Email", "Please enter a valid email address.", "error");
       return;
@@ -2701,19 +2701,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     $("#detailsModal").css("display", "none");
     $(".modal-backdrop").remove();
-    // $.ajax({
-    //   url: scriptURL,
-    //   type: "POST",
-    //   data: formData,
-    //   contentType: "application/x-www-form-urlencoded",
-    //   success: function (response) {
-    //     console.log("Form submitted successfully", response);
-    //   },
-    //   error: function (xhr, status, error) {
-    //     console.error("AJAX Error:", error);
-    //   },
-    // });
-    // Submit to your existing backend (Google Sheet or other script)
+
+    window.location.href = "thankyou.html";
+    
     function getCookie(name) {
       const value = `; ${document.cookie}`;
       const parts = value.split(`; ${name}=`);
@@ -2758,8 +2748,7 @@ document.addEventListener("DOMContentLoaded", function() {
           contentType: "application/json",
           data: JSON.stringify(hsData),
           success: function (hsResponse) {
-            console.log("Also submitted to HubSpot", hsResponse);
-            window.location.href = "thankyou.html";
+            console.log("Also submitted to HubSpot", hsResponse);           
           },
           error: function (xhr, status, error) {
             console.error("HubSpot Submission Error:", error);
