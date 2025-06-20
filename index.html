@@ -985,8 +985,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             <div class="col-md-12">
               <div class="border-start border-3 ps-3" style="border-left: 3px solid #696cc7; font-size: small;">
                 <h6 class="fw-bold">Organic Channels</h6>
-                <p>Organic lead generation methods like SEO, content marketing, and referrals take time to build traction and require consistent effort in content creation and optimization.</p>
-                <p>These methods often deliver long-term ROI but need patience, expertise, and ongoing content maintenance.</p>
+                <p>Organic channels like SEO and content marketing take time and ongoing effort. Lead generation is slow and results often depend on rankings, social traction, or platform algorithms.</p>
               </div>
             </div>
             <div class="col-md-12 text-center my-3">
@@ -995,8 +994,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             <div class="col-md-12">
               <div class="border-start border-3 ps-3" style="border-left: 3px solid #696cc7; font-size: small;">
                 <h6 class="fw-bold">Alcelerate</h6>
-                <p>With Alcelerate, instead of waiting months for organic strategies to work, you can immediately connect with relevant contacts by describing your business and audience.</p>
-                <p>It's faster, simpler, and lets you focus on outreach instead of strategy setup.</p>
+                 <p>Alcelerate provides instant lead generation based on your input, without months of setup or dependency on external platforms.</p>
               </div>
             </div>
           </div>
@@ -1023,8 +1021,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             <div class="col-md-12">
               <div class="border-start border-3 ps-3" style="border-left: 3px solid #696cc7; font-size: small;">
                 <h6 class="fw-bold">Other Databases</h6>
-                <p>Organic lead generation methods like SEO, content marketing, and referrals take time to build traction and require consistent effort in content creation and optimization.</p>
-                <p>These methods often deliver long-term ROI but need patience, expertise, and ongoing content maintenance.</p>
+                 <p>Generic contact databases often lack freshness, relevance, and targeting. Outreach is usually cold and low-converting.</p>
               </div>
             </div>
             <div class="col-md-12 text-center my-3">
@@ -1033,8 +1030,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             <div class="col-md-12">
               <div class="border-start border-3 ps-3" style="border-left: 3px solid #696cc7; font-size: small;">
                 <h6 class="fw-bold">Alcelerate</h6>
-                <p>With Alcelerate, instead of waiting months for organic strategies to work, you can immediately connect with relevant contacts by describing your business and audience.</p>
-                <p>It's faster, simpler, and lets you focus on outreach instead of strategy setup.</p>
+                <p>Alcelerate delivers contacts filtered to your niche with verified relevance, boosting conversions and saving time.</p>
               </div>
             </div>
           </div>
@@ -1061,8 +1057,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             <div class="col-md-12">
               <div class="border-start border-3 ps-3" style="border-left: 3px solid #696cc7; font-size: small;">
                 <h6 class="fw-bold">Mass Messaging</h6>
-                <p>Organic lead generation methods like SEO, content marketing, and referrals take time to build traction and require consistent effort in content creation and optimization.</p>
-                <p>These methods often deliver long-term ROI but need patience, expertise, and ongoing content maintenance.</p>
+                <p>Mass emails or WhatsApp blasts are often seen as spam and face high bounce rates or bans.</p>
               </div>
             </div>
             <div class="col-md-12 text-center my-3">
@@ -1071,8 +1066,7 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
             <div class="col-md-12">
               <div class="border-start border-3 ps-3" style="border-left: 3px solid #696cc7; font-size: small;">
                 <h6 class="fw-bold">Alcelerate</h6>
-                <p>With Alcelerate, instead of waiting months for organic strategies to work, you can immediately connect with relevant contacts by describing your business and audience.</p>
-                <p>It's faster, simpler, and lets you focus on outreach instead of strategy setup.</p>
+                <p>With Alcelerate, you get warm leads, not just random contacts—allowing for smarter, more personalized outreach.</p>
               </div>
             </div>
           </div>
@@ -1749,21 +1743,24 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
         <form>
           <div class="p-3">
 
-            <!-- Full Name -->
+            <!-- First Name -->
             <div class="mb-3">
               <label for="fullName" class="form-label" style="font-family: 'League Spartan', sans-serif; font-size: 18px;">First Name</label>
               <div class="input-group">
                 <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
                 <input type="text" class="form-control" id="fullName" placeholder="Enter your first name">
               </div>
+              <span class="text-danger small" id="fullNameError"></span>
             </div>
 
+            <!-- Last Name -->
             <div class="mb-3">
-              <label for="fullName" class="form-label" style="font-family: 'League Spartan', sans-serif; font-size: 18px;">Last Name</label>
+              <label for="lastName" class="form-label" style="font-family: 'League Spartan', sans-serif; font-size: 18px;">Last Name</label>
               <div class="input-group">
                 <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
                 <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
               </div>
+              <span class="text-danger small" id="lastNameError"></span>
             </div>
 
             <!-- WhatsApp Number + Country Code -->
@@ -1773,16 +1770,18 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
                 <span class="input-group-text bg-light"><i class="bi bi-whatsapp"></i></span>
                 <input type="tel" id="whatsappNumber" class="form-control" placeholder="Enter WhatsApp number">
             </div>
+            <span class="text-danger small" id="whatsappError"></span>
             </div>  
 
 
-            <!-- Email ID -->
+            <!-- Email -->
             <div class="mb-3">
               <label for="email" class="form-label" style="font-family: 'League Spartan', sans-serif; font-size: 18px;">Email ID</label>
               <div class="input-group">
                 <span class="input-group-text bg-light"><i class="bi bi-envelope"></i></span>
                 <input type="email" class="form-control" id="email" placeholder="Enter your email">
               </div>
+              <span class="text-danger small" id="emailError"></span>
             </div>
 
             <!-- Business Name / Website -->
@@ -2485,6 +2484,55 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
+
+  function isAlphabet(value) {
+    return /^[A-Za-z]+$/.test($.trim(value));
+  }
+
+  function isValidPhone(value) {
+    return /^[0-9]{9,15}$/.test($.trim(value));
+  }
+
+  function isValidEmail(value) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($.trim(value));
+  }
+
+   $('#fullName').on('blur', function () {
+      const val = $(this).val();
+      $('#fullNameError').text(isAlphabet(val) ? '' : 'First name must contain only alphabets.');
+    }).on('input', function () {
+      const val = $(this).val();
+      if (isAlphabet(val)) $('#fullNameError').text('');
+    });
+
+    // Validate Last Name
+    $('#lastName').on('blur', function () {
+      const val = $(this).val();
+      $('#lastNameError').text(isAlphabet(val) ? '' : 'Last name must contain only alphabets.');
+    }).on('input', function () {
+      const val = $(this).val();
+      if (isAlphabet(val)) $('#lastNameError').text('');
+    });
+
+    // Validate WhatsApp Number
+    $('#whatsappNumber').on('blur', function () {
+      const val = $(this).val();
+      $('#whatsappError').text(isValidPhone(val) ? '' : 'Enter a valid number (at least 9 digits, digits only).');
+    }).on('input', function () {
+      const val = $(this).val();
+      if (isValidPhone(val)) $('#whatsappError').text('');
+    });
+
+    // Validate Email
+    $('#email').on('blur', function () {
+      const val = $(this).val();
+      $('#emailError').text(isValidEmail(val) ? '' : 'Enter a valid email address.');
+    }).on('input', function () {
+      const val = $(this).val();
+      if (isValidEmail(val)) $('#emailError').text('');
+    });
+
+
   const input = document.querySelector("#whatsappNumber");
   const iti = window.intlTelInput(input, {
     initialCountry: "ae",
