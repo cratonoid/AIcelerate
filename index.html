@@ -154,12 +154,26 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 }
 
 .heroSection1 {
-    background: url('img/banner1.svg') no-repeat center center;
+    background: url('img/Slide-2.png') no-repeat center center;
     background-size: 100% auto; /* Full width, auto height */
     width: 100vw; /* Full viewport width */
     height: auto; 
     min-height: 40vh !important;
     /* aspect-ratio: 16 / 9; Maintain 1920x1080 ratio */
+}
+/* for mac */
+@media (min-height: 900px) and (min-width: 1024px) {
+  .heroSection {
+    min-height: 63vh !important;
+    background-size: cover;
+  }
+  .heroSection1 {
+    background: url('img/Slide-2.png') no-repeat center center;
+    background-size: 100% auto; /* Full width, auto height */    
+    height: auto; 
+    min-height: 30vh !important;
+    /* aspect-ratio: 16 / 9; Maintain 1920x1080 ratio */
+}
 }
 
 /* Background for Mobile */
