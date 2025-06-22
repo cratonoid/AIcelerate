@@ -123,23 +123,26 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 
    <!-- Hero Section Start -->
    <div class="container-fluid p-0">
-  <div class="position-relative w-100 min-vh-100 heroSection">
-    <div class="overlay"></div>
-    <a href="#" class="btn apply-btn" data-bs-toggle="modal" data-bs-target="#detailsModal">Get Access</a>
-  </div>
+    <div class="position-relative w-100 min-vh-100 heroSection">
+        
+        <!-- Overlay -->
+        <div class="overlay"></div>
 
-  <div class="position-relative w-100 heroSection1"> <!-- Removed min-vh-100 -->
-    <!-- Optional content -->
-  </div>
-</div>
+        <!-- Apply Now Button -->
+       <a href="#" class="btn apply-btn" 
+   data-bs-toggle="modal" data-bs-target="#detailsModal" 
+   style="font-family: 'Montserrat', sans-serif;">
+   Get Access
+</a>
 
+     </div>
+     <div class="position-relative w-100 min-vh-100 heroSection1">
+        
+        
+     </div>
+    </div>
 
 <style>
-  html, body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 /* Default Background for Desktop */
 .heroSection {
     background: url('img/banner.jpeg') no-repeat center center;
@@ -171,22 +174,6 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
     min-height: 30vh !important;
     /* aspect-ratio: 16 / 9; Maintain 1920x1080 ratio */
 }
-}
-@media(min-width: 1440px) {
-  .heroSection {
-    min-height: 63vh !important;
-    background-size: cover;
-  }
-  .heroSection1 {
-    background: url('img/Slide-2.png') no-repeat center center;
-    background-size: 100% auto; /* Full width, auto height */    
-    height: auto; 
-    min-height: 30vh !important;
-    /* aspect-ratio: 16 / 9; Maintain 1920x1080 ratio */
-  }
-  .apply-btn {
-    margin-top: 28% !important;
-  }
 }
 
 /* Background for Mobile */
