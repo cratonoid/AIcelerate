@@ -121,285 +121,99 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
         
 
 
-   <!-- Hero Section Start -->
-   <div class="container-fluid p-0">
-    <div class="position-relative w-100 min-vh-100 heroSection">
-        
+<!-- Hero Section Start -->
+<div class="container-fluid p-0">
+    <!-- First Banner Section -->
+    <div class="position-relative w-100 heroSection">
+        <!-- Desktop Banner -->
+        <img src="img/banner.jpeg" alt="Banner" class="img-fluid w-100 hero-image d-none d-md-block">
+        <!-- Mobile Banner -->
+        <img src="img/banner_mob.jpg" alt="Mobile Banner" class="img-fluid w-100 hero-image d-block d-md-none">
+
         <!-- Overlay -->
         <div class="overlay"></div>
 
         <!-- Apply Now Button -->
-       <a href="#" class="btn apply-btn" 
-   data-bs-toggle="modal" data-bs-target="#detailsModal" 
-   style="font-family: 'Montserrat', sans-serif;">
-   Get Access
-</a>
-
-     </div>
-     <div class="position-relative w-100 min-vh-100 heroSection1">
-        
-        
-     </div>
+        <a href="#" class="btn apply-btn" data-bs-toggle="modal" data-bs-target="#detailsModal">
+            Get Access
+        </a>
     </div>
 
+    <!-- Second Banner Section -->
+    <div class="position-relative w-100 heroSection1">
+        <!-- Desktop Second Banner -->
+        <img src="img/Slide-2.png" alt="Slide" class="img-fluid w-100 hero-image d-none d-md-block">
+        <!-- Mobile Second Banner -->
+        <img src="img/Asset 112.webp" alt="Mobile Slide" class="img-fluid w-100 hero-image d-block d-md-none">
+    </div>
+</div>
+
+
 <style>
-/* Default Background for Desktop */
-.heroSection {
-    background: url('img/banner.jpeg') no-repeat center center;
-    background-size: 100% auto; /* Full width, auto height */
-    width: 100vw; /* Full viewport width */
-    height: auto; 
-    min-height: 83vh !important;
-    /* aspect-ratio: 16 / 9; Maintain 1920x1080 ratio */
+
+.heroSection, .heroSection1 {
+    position: relative;
 }
 
-.heroSection1 {
-    background: url('img/Slide-2.png') no-repeat center center;
-    background-size: 100% auto; /* Full width, auto height */
-    width: 100vw; /* Full viewport width */
-    height: auto; 
-    min-height: 40vh !important;
-    /* aspect-ratio: 16 / 9; Maintain 1920x1080 ratio */
-}
-/* for mac */
-@media (min-height: 900px) and (min-width: 1024px) {
-  .heroSection {
-    min-height: 63vh !important;
-    background-size: cover;
-  }
-  .heroSection1 {
-    background: url('img/Slide-2.png') no-repeat center center;
-    background-size: 100% auto; /* Full width, auto height */    
-    height: auto; 
-    min-height: 30vh !important;
-    /* aspect-ratio: 16 / 9; Maintain 1920x1080 ratio */
-}
-}
-@media (min-height: 800px) and (min-width: 1440px) {
-  .heroSection {
-    min-height: 63vh !important;
-    background-size: cover;
-  }
-  .heroSection1 {
-    background: url('img/Slide-2.png') no-repeat center center;
-    background-size: 100% auto; /* Full width, auto height */    
-    height: auto; 
-    min-height: 30vh !important;
-    /* aspect-ratio: 16 / 9; Maintain 1920x1080 ratio */
-}
-.apply-btn {         
-    margin-top: 28% !important; 
-    }
+.hero-image {
+    width: 100%;
+    height: auto; /* This will maintain image aspect ratio automatically */
+    display: block;
 }
 
-
-@media (min-height: 720px) and (min-width: 1280px) {
-  .heroSection {
-    min-height: 70vh !important;
-    background-size: cover;
-  }
-
-  .heroSection1 {
-    background: url('img/Slide-2.png') no-repeat center center;
-    background-size: 100% auto;
-    height: auto;
-    min-height: 30vh !important;
-    /* Optional: aspect-ratio: 16 / 9; */
-  }
-
-  .apply-btn {
-    margin-top: 30% !important; /* Adjust as needed based on visual testing */
-  }
-}
-
-
-
-
-/* MacBook Pro 13" and similar (1280x800) */
-@media (min-width: 1280px) and (min-height: 800px) {
-  .heroSection {
-    min-height: 63vh !important;
-    background-size: cover;
-  }
-
-  .heroSection1 {
-    background: url('img/Slide-2.png') no-repeat center center;
-    background-size: 100% auto;
-    height: auto;
-    min-height: 30vh !important;
-  }
-
-  .apply-btn {
-    margin-top: 30% !important;
-  }
-}
-
-/* MacBook Air 13" and MacBook Pro Retina 13" (1440x900) */
-@media (min-width: 1440px) and (min-height: 900px) {
-  .heroSection {
-    min-height: 63vh !important;
-    background-size: cover;
-  }
-
-  .heroSection1 {
-    background: url('img/Slide-2.png') no-repeat center center;
-    background-size: 100% auto;
-    height: auto;
-    min-height: 30vh !important;
-  }
-
-  .apply-btn {
-    margin-top: 29% !important;
-  }
-}
-
-/* MacBook Pro 14" (1512x982) */
-@media (min-width: 1512px) and (min-height: 982px) {
-  .heroSection {
-    min-height: 65vh !important;
-    background-size: cover;
-  }
-
-  .heroSection1 {
-    background: url('img/Slide-2.png') no-repeat center center;
-    background-size: 100% auto;
-    height: auto;
-    min-height: 30vh !important;
-  }
-
-  .apply-btn {
-    margin-top: 32% !important;
-  }
-}
-
-/* MacBook Pro 16" (1728x1117) */
-@media (min-width: 1728px) and (min-height: 1117px) {
-  .heroSection {
-    min-height: 63vh !important;
-    background-size: cover;
-  }
-
-  .heroSection1 {
-    background: url('img/Slide-2.png') no-repeat center center;
-    background-size: 100% auto;
-    height: auto;
-    min-height: 32vh !important;
-  }
-
-  .apply-btn {
-    margin-top: 31% !important;
-  }
-}
-
-
-@media (min-width: 1024px) and (min-height: 768px) {
-  .heroSection {
-    min-height: 54vh !important;
-    background-size: cover;
-  }
-
-  .heroSection1 {
-    background: url('img/Slide-2.png') no-repeat center center;
-    background-size: 100% auto;
-    height: auto;
-    min-height: 26vh !important;
-  }
-
-  .apply-btn {
-    margin-top: 28.5% !important;
-  }
-}
-
-@media (min-width: 1920px) and (min-height: 1080px) {
-  .heroSection {
-    min-height: 69vh !important;
-    background-size: cover;
-  }
-
-  .heroSection1 {
-    background: url('img/Slide-2.png') no-repeat center center;
-    background-size: 100% auto;
-    height: auto;
-    min-height: 26vh !important;
-  }
-
-  .apply-btn {
-    margin-top: 31% !important;
-  }
-}
-
-
-
-/* Background for Mobile */
-@media (max-width: 768px) {
-    .heroSection {
-        background: url('img/banner_mob.jpg') no-repeat top center; /* Align to top */
-        background-size: 100% auto;
-        height: auto;        
-        width: 100vw;
-        margin-bottom: -25%;
-    }
-    .heroSection1 {
-      padding-bottom: 125%;
-        background: url('img/Asset 112.webp') no-repeat top center; /* Align to top */
-        background-size: 100% auto;
-        height: auto;        
-        width: 100vw;
-    }
-    .apply-btn {    
-      font-size: 150% !important;      
-    margin-top: 120% !important;
-        margin-left: 23% !important;
-      
-    }
-    .mb-5 {
-        margin-bottom: 0rem !important;
-    }
-    .overlay{
-        height: 80%;
-        background: rgba(0, 0, 0, 0.061);
-    }
-}
-
-/* Dark Overlay */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    /* Example overlay styling */
     background: rgba(0, 0, 0, 0);
     z-index: 1;
 }
 
-/* Apply Button Position */
 .apply-btn {
-    position: absolute;    
+    font-size: 1.5rem;
+                    font-weight: 100;
+                    background-color: #696cc7;
+                    color: #ffffff;
+                    border-radius: 30px;
+                    box-shadow: 0 4px 8px rgba(59, 101, 255, 0.382);
+                    transition: all 0.4s ease;
+                    border-color: #696cc7;
+                    font-family: 'Montserrat', sans-serif !important;
+    position: absolute;
+    top: 75%;
+    left: 6%;
+    /* transform: translate(-50%, -50%); */
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top:0.7rem ;
+    padding-bottom: 0.7rem;
     z-index: 2;
-    border-radius: 30px; 
-    font-weight: 600;
-    padding: 14px 40px;
-    background-color: #696cc7;
-    color: #ffffff;
-    box-shadow: 0 4px 8px rgba(59, 101, 255, 0.382);
-    transition: all 0.4s ease;                            
-    font-size: 18px;
-    margin-top: 30%;
-    margin-left: 5%;
+    /* Adjust padding, font-size, etc., as needed */
 }
-.btn-primary{
-    border-radius: 10px;
 
+
+/* Background for Mobile */
+@media (max-width: 768px) {
+    .apply-btn {
+      font-family: 'Montserrat', sans-serif !important;
+              left: 25%;
+        top: 85%;
+        font-size: 1.7rem;
+        padding: 0.5rem 1.5rem;
+    }
 }
+
+
 
 .apply-btn:hover {
     background-color: #484cbd;
 }
 
+
 </style>
-
-   <!-- Hero Section End -->
-
 
 
 <!-- How it works -->
