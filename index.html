@@ -121,6 +121,26 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 </head>
 
 <body>
+
+  <!-- Loader Overlay -->
+  <div id="formLoaderOverlay" style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  ">
+    <div class="spinner-border text-primary" role="status" style="width: 4rem; height: 4rem;">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -166,6 +186,10 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 .heroSection, .heroSection1 {
     position: relative;
 }
+#formLoaderOverlay {
+  transition: opacity 0.3s ease;
+}
+
 
 .hero-image {
     width: 100%;
@@ -2480,6 +2504,8 @@ src="https://www.facebook.com/tr?id=1219226336561767&ev=PageView&noscript=1"
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
+ $("#formLoaderOverlay").fadeOut();
+
   function isAlphabet(value) {
     return /^[A-Za-z]+$/.test($.trim(value));
   }
@@ -2638,6 +2664,7 @@ document.addEventListener("DOMContentLoaded", function() {
   $("#submitForm").click(function (event) {
     event.preventDefault();
 
+  $("#formLoaderOverlay").fadeIn();
     // Get input values
     let fullName = $("#fullName").val().trim();
     let lastName = $("#lastName").val().trim()
@@ -2687,6 +2714,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "Please enter a valid first name (letters only).",
         "error"
       );
+      $("#formLoaderOverlay").fadeOut();
       return;
     }
     if (lastName === "" || !nameRegex.test(lastName)) {
@@ -2695,14 +2723,17 @@ document.addEventListener("DOMContentLoaded", function() {
         "Please enter a valid last name (letters only).",
         "error"
       );
+      $("#formLoaderOverlay").fadeOut();
       return;
     }
     if (whatsappNumber === "" || /[a-zA-Z]/.test(whatsappNumber)) {
   swal("Invalid Number", "Please enter a valid WhatsApp number (no letters allowed).", "error");
+  $("#formLoaderOverlay").fadeOut();
   return;
 }
     if (email === "" || !emailRegex.test(email)) {
       swal("Invalid Email", "Please enter a valid email address.", "error");
+      $("#formLoaderOverlay").fadeOut();
       return;
     }
     if (businessName === "") {
@@ -2711,6 +2742,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "Please enter a valid Business Name.",
         "error"
       );
+      $("#formLoaderOverlay").fadeOut();
       return;
     }
     if (annualRevenue === "") {
@@ -2719,6 +2751,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "Please enter a valid Annual Revenue.",
         "error"
       );
+      $("#formLoaderOverlay").fadeOut();
       return;
     }
     if (connectTime === "") {
@@ -2727,6 +2760,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "Please select a convenient time to connect.",
         "error"
       );
+      $("#formLoaderOverlay").fadeOut();
       return;
     }
 
@@ -2741,9 +2775,6 @@ document.addEventListener("DOMContentLoaded", function() {
       Url: url,
       "Lp name": "AIcelerate",
     };
-
-    $("#detailsModal").css("display", "none");
-    $(".modal-backdrop").remove();
     
     function getCookie(name) {
       const value = `; ${document.cookie}`;
@@ -2790,15 +2821,20 @@ document.addEventListener("DOMContentLoaded", function() {
           data: JSON.stringify(hsData),
           success: function (hsResponse) {
             console.log("Also submitted to HubSpot", hsResponse);
+            $("#detailsModal").css("display", "none");
+            $(".modal-backdrop").remove();
+            $("#formLoaderOverlay").fadeOut();
             window.location.href = "thankyou.html";           
           },
           error: function (xhr, status, error) {
             console.error("HubSpot Submission Error:", error);
+            $("#formLoaderOverlay").fadeOut();
           },
         });
       },
       error: function (xhr, status, error) {
         console.error("Google Sheets AJAX Error:", error);
+        $("#formLoaderOverlay").fadeOut();
       },
     });
   });
