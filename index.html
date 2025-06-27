@@ -2794,6 +2794,7 @@ document.addEventListener("DOMContentLoaded", function() {
             { name: "landing_page_url", value: url || window.location.href },
             { name: "lp_name", value: "AIcelerate" },
             { name: "submission_time", value: formatted },
+            { name: "relationship_status", value: "new_lead"}
           ],
           context: {
             hutk: getCookie("hubspotutk"),
@@ -2809,9 +2810,6 @@ document.addEventListener("DOMContentLoaded", function() {
           data: JSON.stringify(hsData),
           success: function (hsResponse) {
             console.log("Also submitted to HubSpot", hsResponse);
-            $("#detailsModal").css("display", "none");
-            $(".modal-backdrop").remove();
-            $("#formLoaderOverlay").fadeOut();
             window.location.href = "thankyou.html";           
           },
           error: function (xhr, status, error) {
