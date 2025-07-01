@@ -2763,6 +2763,8 @@ document.addEventListener("DOMContentLoaded", function() {
       $("#formLoaderOverlay").fadeOut();
       return;
     }
+    window.location.href = "thankyou.html";
+
 
     let formData = {
       "Date and Time": formatted,
@@ -2822,7 +2824,7 @@ document.addEventListener("DOMContentLoaded", function() {
           data: JSON.stringify(hsData),
           success: function (hsResponse) {
             console.log("Also submitted to HubSpot", hsResponse);
-            window.location.href = "thankyou.html";           
+            // window.location.href = "thankyou.html";           
           },
           error: function (xhr, status, error) {
             console.error("HubSpot Submission Error:", error);
