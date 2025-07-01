@@ -2763,7 +2763,7 @@ document.addEventListener("DOMContentLoaded", function() {
       $("#formLoaderOverlay").fadeOut();
       return;
     }
-    window.location.href = "thankyou.html";
+    
 
 
     let formData = {
@@ -2789,9 +2789,16 @@ document.addEventListener("DOMContentLoaded", function() {
       data: formData,
       contentType: "application/x-www-form-urlencoded",
       success: function (response) {
-        console.log("Form submitted successfully to Google Sheet", response);
+        console.log("Form submitted successfully to Google Sheet", response);        
+      },
+      error: function (xhr, status, error) {
+        console.error("Google Sheets AJAX Error:", error);
+        $("#formLoaderOverlay").fadeOut();
+      },
+    });
 
-        // Now ALSO send to HubSpot
+
+    // Now ALSO send to HubSpot
         const portalId = "146250154";
         const formId = "1232c850-be75-48a6-ae66-88eb6b75483c";
 
@@ -2831,12 +2838,10 @@ document.addEventListener("DOMContentLoaded", function() {
             $("#formLoaderOverlay").fadeOut();
           },
         });
-      },
-      error: function (xhr, status, error) {
-        console.error("Google Sheets AJAX Error:", error);
-        $("#formLoaderOverlay").fadeOut();
-      },
-    });
+
+        window.location.href = "thankyou.html";
+
+
   });
 });
 </script>
