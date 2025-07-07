@@ -2835,32 +2835,32 @@ document.addEventListener("DOMContentLoaded", function() {
           },
         };
 
-        // $.ajax({
-        //   url: `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`,
-        //   type: "POST",
-        //   contentType: "application/json",
-        //   data: JSON.stringify(hsData),
-        //   success: function (hsResponse) {
-        //     console.log("Also submitted to HubSpot", hsResponse);
-        //     // window.location.href = "thankyou.html";           
-        //   },
-        //   error: function (xhr, status, error) {
-        //     console.error("HubSpot Submission Error:", error);
-        //     $("#formLoaderOverlay").fadeOut();
-        //   },
-        // });
-        const hsUrl = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
-        const hsPayload = JSON.stringify(hsData);
-        const hsBlob = new Blob([hsPayload], { type: 'application/json' });
-              
-        const hsSuccess = navigator.sendBeacon(hsUrl, hsBlob);
-              
-        if (hsSuccess) {
-            console.log("Form submission queued successfully (HubSpot)");
-        } else {
-            console.error("HubSpot submission failed to queue.");
+        $.ajax({
+          url: `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`,
+          type: "POST",
+          contentType: "application/json",
+          data: JSON.stringify(hsData),
+          success: function (hsResponse) {
+            console.log("Also submitted to HubSpot", hsResponse);
+            // window.location.href = "thankyou.html";           
+          },
+          error: function (xhr, status, error) {
+            console.error("HubSpot Submission Error:", error);
             $("#formLoaderOverlay").fadeOut();
-        }
+          },
+        });
+        // const hsUrl = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
+        // const hsPayload = JSON.stringify(hsData);
+        // const hsBlob = new Blob([hsPayload], { type: 'application/json' });
+
+        // const hsSuccess = navigator.sendBeacon(hsUrl, hsBlob);
+
+        // if (hsSuccess) {
+        //     console.log("Form submission queued successfully (HubSpot)");
+        // } else {
+        //     console.error("HubSpot submission failed to queue.");
+        //     $("#formLoaderOverlay").fadeOut();
+        // }
 
 
         window.location.href = "thankyou.html";
