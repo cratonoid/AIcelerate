@@ -2665,7 +2665,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let businessName = $("#businessName").val();
     let connectTime = $("#connectTime").val();
     let annualRevenue = $("#annualRevenue").val();
-    let url = sessionStorage.getItem("url");
+    let url = sessionStorage.getItem("url") || window.location.href;
     const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     const now = new Date();
 
